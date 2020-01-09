@@ -8,7 +8,7 @@
 <div class="p-3 mb-2 bg-secondary text-white"><h2>2. Please fill in your details below. Fields with * are
     mandatory.</h2>
 <br><br>
-<form id="smeUser" action="#" th:action="@{newSMEUser}" th:object="${smeUser}" method="post">
+<form id="smeUser" action="#" th:action="@{newSmeUser}" th:object="${smeUser}" method="post">
     <div class="form-group">
         <label for="role">Choose Role:</label>
         <select id="role" th:field="*{roleEmployee}" name="roleEmployee" required class="form-control">
@@ -24,8 +24,7 @@
 
     <div class="form-group">
         <label for="middleName">Middle Name:</label>
-        <input id="middleName" type="text" th:field="*{middleName}" name="middleName" class="form-control"
-               placeholder="middlenaam">
+        <input id="middleName" type="text" th:field="*{middleName}" name="middleName" class="form-control">
     </div>
 
     <div class="form-group">

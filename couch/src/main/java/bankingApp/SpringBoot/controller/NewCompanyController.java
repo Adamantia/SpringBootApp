@@ -48,14 +48,11 @@ public class NewCompanyController implements WebMvcConfigurer {
         if (companyForm.size() == 0 && sectors.size() == 0) {
             Collections.addAll(companyForm, "B.V.", "Eenmanszaak", "Vereniging of Stichting", "V.O.F", "Andere ondernemingsvorm");
             // branch-informatie van KvK
-            Collections.addAll(sectors, "ICT", "Advies en Consultancy", "Bouw, installatie en infra", "Energie",
-                    "Financiële dienstverlening", "Water en afval", "Industrie", "Groothandel", "Agrosector", "Horeca", "Onderwijs en training",
-                    "Persoonlijke dienstverlening en not-for-profit", "Gezondheidszorg", "Vervoer, post en opslag");
-
-            company.
+//            Collections.addAll(sectors, "ICT", "Advies en Consultancy", "Bouw, installatie en infra", "Energie",
+//                    "Financiële dienstverlening", "Water en afval", "Industrie", "Groothandel", "Agrosector", "Horeca", "Onderwijs en training",
         }
         model.addAttribute("companyForm", companyForm);
-        model.addAttribute("sectors", sectors);
+//        model.addAttribute("sectors", sectors);
         return "new_company";
     }
 
@@ -70,7 +67,7 @@ public class NewCompanyController implements WebMvcConfigurer {
         }
         if (bindingResult.hasErrors()) {
             model.addAttribute("companyForm", companyForm);
-            model.addAttribute("sectors", sectors);
+//            model.addAttribute("sectors", sectors);
             model.addAttribute("company", company);
             return "new_company";
         } else {
@@ -84,7 +81,7 @@ public class NewCompanyController implements WebMvcConfigurer {
             model.addAttribute("company", company);
             model.addAttribute("roles", roles);
             model.addAttribute("smeUser", smeUser);
-            return "new_SMEUser";
+            return "new_smeUser";
         }
     }
 

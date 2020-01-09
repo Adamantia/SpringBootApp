@@ -1,6 +1,7 @@
 package bankingApp.SpringBoot.model;
 
 import bankingApp.SpringBoot.model.constraints.kvkNumberDoesNotExistConstraint;
+import bankingApp.SpringBoot.model.enums.CompanySector;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;

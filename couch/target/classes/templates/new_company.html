@@ -35,9 +35,15 @@
         <div class="form-group">
             <label for="sector">Choose Company Branche:</label>
 
-            <select id="sector" th:field="*{sector}" required class="form-control">
-                <option value=""> --</option>
-                <option th:each="sector: ${sectors}" th:value="${sector}" th:utext="${sector}"></option>
+<!--            <select id="sector" th:field="*{sector}" required class="form-control">-->
+<!--                <option value=""> &#45;&#45;</option>-->
+<!--                <option th:each="sector: ${sectors}" th:value="${sector}" th:utext="${sector}"></option>-->
+<!--            </select>-->
+            <select  id="sector" th:field="*{sector}" required class="form-control" >
+                <option th:each="sector : ${T(bankingApp.SpringBoot.model.enums.CompanySector).values()}"
+                        th:value="${sector}"
+                        th:text="${sector.displayName}">
+                </option>
             </select>
         </div>
         <div class="form-group">

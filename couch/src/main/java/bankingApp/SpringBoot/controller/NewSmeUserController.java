@@ -38,7 +38,7 @@ public class NewSmeUserController {
 
     private List<String> roles = new ArrayList<>();
 
-    @RequestMapping(value = "newSMEUser")
+    @RequestMapping(value = "newSmeUser")
     public String newSMEUserHandler(@Valid @ModelAttribute("smeUser") @RequestBody SmeUser smeUser,
                                     BindingResult bindingResult,
                                     Model model, HttpServletRequest request) {
@@ -50,7 +50,7 @@ public class NewSmeUserController {
         if (bindingResult.hasErrors()) {
             model.addAttribute("roles", roles);
             model.addAttribute("smeUser", smeUser);
-            return "new_SMEUser";
+            return "new_smeUser";
         } else {
             //check is user already has a company
             if (validator.userOwnsAnotherCompany(smeUser.getBsn())) {
@@ -59,7 +59,7 @@ public class NewSmeUserController {
 //            newCompany.addCompanyEmployee(smeUser);
             smeUser.setCompany(newCompany);
             smeUserService.newSmeUser(smeUser);
-            return "new_SMEUser_success";
+            return "new_smeUser_success";
         }
     }
 }

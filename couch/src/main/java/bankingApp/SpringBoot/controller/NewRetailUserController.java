@@ -23,17 +23,17 @@ public class NewRetailUserController implements WebMvcConfigurer {
    @GetMapping(value = "newRetailUser")
     public String newRetailUserHandler(Model model, RetailUser retailUser){
        model.addAttribute("retailUser", retailUser);
-        return "new_retail_user";
+        return "new_retailUser";
     }
 
     @PostMapping(value ="newRetailUser")
     public String retailUserHandler(@Valid RetailUser retailUser,
                                     BindingResult bindingResult){
         if(bindingResult.hasErrors()){
-            return "new_retail_user";
+            return "new_retailUser";
         } else {
             retailUserService.newRetailUser(retailUser);
-        return "new_retail_user_success";
+        return "new_retailUser_success";
     }
    }
 

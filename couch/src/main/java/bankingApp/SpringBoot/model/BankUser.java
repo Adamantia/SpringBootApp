@@ -8,8 +8,6 @@ import javax.validation.constraints.NotEmpty;
 
 @Entity
 public class BankUser extends User {
-
-    //@NotEmpty -- it was giving errors
     private String role;
     @OneToMany(mappedBy = "bankAccountTo")
     private List<Transaction> transactionsTo;
@@ -20,7 +18,6 @@ public class BankUser extends User {
 
     public BankUser(){
      this(" ", " ");
-     this.companies = new ArrayList<>();
     }
 
     public BankUser(@NotEmpty String userName, @NotEmpty String userPassword) {

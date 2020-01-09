@@ -111,18 +111,18 @@ public class HibernateLab {
             List<BankAccount> bankAccountListTest = new ArrayList<>();
             bankAccountListTest.add(accountTest);
 
-            Company companyTest = new Company(98763198, "Amaphon", "B.V", "ICT", address, "6904134321", 1234, true, employees, bankAccountListTest,
-                    accountManagerTest, "amaphon@nn.nl");
-
-            companyDao.save(companyTest);
-            smeUserTest.setCompany(companyTest);
-            smeUserTest2.setCompany(companyTest);
-            smeUserTest3.setCompany(companyTest);
-            existingRetailUser.setCompany(companyTest);
-            smeUserDao.save(smeUserTest);
-            smeUserDao.save(smeUserTest2);
-            smeUserDao.save(smeUserTest3);
-            smeUserDao.save(existingRetailUser);
+//            Company companyTest = new Company(98763198, "Amaphon", "B.V", "ICT", address, "6904134321", 1234, true, employees, bankAccountListTest,
+//                    accountManagerTest, "amaphon@nn.nl");
+//
+//            companyDao.save(companyTest);
+//            smeUserTest.setCompany(companyTest);
+//            smeUserTest2.setCompany(companyTest);
+//            smeUserTest3.setCompany(companyTest);
+//            existingRetailUser.setCompany(companyTest);
+//            smeUserDao.save(smeUserTest);
+//            smeUserDao.save(smeUserTest2);
+//            smeUserDao.save(smeUserTest3);
+//            smeUserDao.save(existingRetailUser);
 
 
             //  testData.makeRetailUserList();                          //AMS: haalt retail data op uit CSV file
