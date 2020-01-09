@@ -1,0 +1,1268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="AUTOSCROLL_TO_SOURCE" value="true" />
+    <option name="GROUP_BY_SEVERITY" value="true" />
+    <option name="SHOW_STRUCTURE" value="true" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="64648397-78e5-4b0a-a6cb-754c8391fb39" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/couch/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="myCouch@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="ErrorTreeViewConfiguration">
+    <option name="autoscrollToSource" value="true" />
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/service/IbanGeneratorService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/service/HibernateLab.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="969">
+              <caret line="64" column="65" selection-start-line="64" selection-start-column="63" selection-end-line="64" selection-end-column="72" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/couch/src/main/resources/templates/new_company.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1224">
+              <caret line="95" column="7" selection-start-line="95" selection-start-column="7" selection-end-line="97" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/couch/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="31" column="38" lean-forward="true" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/model/dao/SmeUserRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/model/dao/TransactionRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/service/AddBankAccountService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/service/SmeUserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/model/dao/BankAccountRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/model/dao/BankUserRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="AnnotationType" />
+        <option value="Enum" />
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>persistence</find>
+      <find>hibern</find>
+      <find>requestma</find>
+      <find>rparen</find>
+      <find>thymele</find>
+      <find>EnableWe</find>
+      <find>WebMvc</find>
+      <find>Enable</find>
+      <find>hier</find>
+      <find>jqu</find>
+      <find>api</find>
+      <find>jquery</find>
+      <find>toAccount</find>
+    </findStrings>
+    <dirStrings>
+      <dir>C:\Programming\team-4\couch\src\main\java\miw\s16\couch\couch</dir>
+      <dir>C:\Programming\team-4\couch\src\main\java\miw\s16\couch</dir>
+      <dir>C:\Programming\team-4\couch\src\main\java</dir>
+      <dir>C:\Programming\team-4\couch\src</dir>
+      <dir>C:\Programming\team-4\.idea</dir>
+      <dir>C:\Programming\team-4</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GroovyConsoleState">
+    <option name="list">
+      <list>
+        <Entry>
+          <option name="url" value="file://$APPLICATION_CONFIG_DIR$/consoles/groovy/groovy_console.groovy" />
+          <option name="moduleName" value="team-4" />
+          <option name="title" value="team-4 (Bundled Groovy 2.4.15)" />
+        </Entry>
+      </list>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/service/Naming.java" />
+        <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/model/dao/BankAccountRepository.java" />
+        <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/model/dao/RetailUserRepository.java" />
+        <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/service/CommonAccountService.java" />
+        <option value="$PROJECT_DIR$/couch/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/controller/BankAccountDetailsController.java" />
+        <option value="$PROJECT_DIR$/couch/src/main/resources/templates/transaction.html" />
+        <option value="$PROJECT_DIR$/couch/src/main/resources/static/css/styles.css" />
+        <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/model/Transaction.java" />
+        <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/service/TransactionService.java" />
+        <option value="$PROJECT_DIR$/couch/src/main/resources/templates/new_SMEUser_success.html" />
+        <option value="$PROJECT_DIR$/couch/src/main/resources/templates/error.html" />
+        <option value="$PROJECT_DIR$/couch/src/main/resources/templates/new_retail_user_success.html" />
+        <option value="$PROJECT_DIR$/couch/src/main/resources/templates/logged_out.html" />
+        <option value="$PROJECT_DIR$/couch/src/main/resources/templates/transaction_feedback.html" />
+        <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/model/User.java" />
+        <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/service/RetailUserService.java" />
+        <option value="$PROJECT_DIR$/couch/src/main/resources/templates/new_retail_user.html" />
+        <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/controller/NewRetailUserController.java" />
+        <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/service/CompanyService.java" />
+        <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/controller/NewCompanyController.java" />
+        <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/controller/NewSmeUserController.java" />
+        <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/service/HibernateLab.java" />
+        <option value="$PROJECT_DIR$/couch/src/main/resources/templates/new_company.html" />
+        <option value="$PROJECT_DIR$/couch/src/main/resources/templates/new_user_select_type.html" />
+        <option value="$PROJECT_DIR$/couch/src/main/resources/templates/fillout_koppelcode.html" />
+        <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/model/SmeUser.java" />
+        <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/model/RetailUser.java" />
+        <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/model/Company.java" />
+        <option value="$PROJECT_DIR$/couch/src/main/resources/templates/new_SMEUser.html" />
+        <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/model/BankAccount.java" />
+        <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/model/dao/SmeUserRepository.java" />
+        <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/service/AddEmployeeService.java" />
+        <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/controller/NewCompanyEmployeeController.java" />
+        <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/service/TypeOfUserValidator.java" />
+        <option value="$PROJECT_DIR$/couch/src/main/resources/templates/company_account_details.html" />
+        <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/service/BankAccountService.java" />
+        <option value="$PROJECT_DIR$/couch/src/main/resources/templates/sme_page.html" />
+        <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/controller/PersonalPageController.java" />
+        <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/controller/TransactionController.java" />
+        <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/model/Address.java" />
+        <option value="$PROJECT_DIR$/couch/src/main/resources/templates/personal_page.html" />
+        <option value="$PROJECT_DIR$/couch/src/main/resources/templates/bank_account_details.html" />
+        <option value="$PROJECT_DIR$/couch/src/main/resources/templates/login_failed.html" />
+        <option value="$PROJECT_DIR$/couch/src/main/resources/templates/index.html" />
+        <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/couch/src/main/resources/templates/company_login.html" />
+        <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/controller/CompanyPageController.java" />
+        <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/service/AddBankAccountService.java" />
+        <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/service/SmeUserService.java" />
+        <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/model/dao/BankUserRepository.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="couch" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="couch" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="couch" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="couch" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+          <item name="jar" type="36feed69:MavenProjectsStructure$PluginNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="couch" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+          <item name="resources" type="36feed69:MavenProjectsStructure$PluginNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="couch" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+          <item name="spring-boot" type="36feed69:MavenProjectsStructure$PluginNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="couch" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="593" />
+    <option name="y" value="50" />
+    <option name="width" value="1266" />
+    <option name="height" value="1442" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="bankingApp" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Programming\bankingApp" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="bankingApp" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Programming\bankingApp" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="couch" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="bankingApp" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Programming\bankingApp" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="couch" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="bankingApp" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Programming\bankingApp" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="couch" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="bankingApp" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Programming\bankingApp" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="couch" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="bankingApp" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Programming\bankingApp" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="couch" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="bankingApp" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Programming\bankingApp" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="couch" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="bankingApp" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="bankingApp" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Programming\bankingApp" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="couch" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="bankingApp" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="SpringBoot" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="bankingApp" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Programming\bankingApp" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="couch" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="bankingApp" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="SpringBoot" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="service" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="bankingApp" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Programming\bankingApp" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="couch" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="bankingApp" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Programming\bankingApp" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="couch" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="static" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="bankingApp" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Programming\bankingApp" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="couch" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="static" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="css" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="bankingApp" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Programming\bankingApp" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="couch" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="static" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="images" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="bankingApp" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Programming\bankingApp" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="couch" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="templates" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
+      <pane id="Course" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../team-4" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.splitter.proportion" value="0.16623545" />
+  </component>
+  <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="miw.s16.couch.couch.controller" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="bankingApp.SpringBoot" />
+      <recent name="bankingApp.SpringBoot.couch.couch" />
+      <recent name="bankingApp.SpringBoot.couch" />
+      <recent name="miw.s16.couch.couch" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Programming\team-4\couch\src\main\resources\static\images" />
+      <recent name="C:\Programming\team-4\couch\src\main\java\miw\s16\couch\couch\service" />
+      <recent name="C:\Programming\team-4\couch\src\main\resources\static" />
+      <recent name="C:\Programming\team-4\couch\src\main\resources\static\css" />
+      <recent name="C:\Programming\team-4\couch\src\resources" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="miw.s16.couch.couch.controller" />
+      <recent name="miw.s16.couch.couch.model" />
+      <recent name="miw.s16.couch.couch.service" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Programming\team-4\couch\src\main\resources\META-INF\resources" />
+      <recent name="C:\Programming\team-4\couch\src\main\resources\META-INF" />
+      <recent name="C:\Programming\team-4\couch\src\main\resources\resources" />
+      <recent name="C:\Programming\team-4\couch\src\main\resources\public" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.CouchApplication">
+    <configuration name="TransactionLauncher" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="miw.s16.couch.couch.controller.TransactionLauncher" />
+      <module name="couch" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bankingApp.SpringBoot.controller.LoginController" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CouchApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="couch" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="bankingApp.SpringBoot.CouchApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="couch" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="miw.s16.couch.couch.CouchApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="1" Folder0="C:\Users\Mandy\Downloads" CustomDictionaries="1" CustomDictionary0="C:\Users\Mandy\Downloads\nl.dic" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="project-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="64648397-78e5-4b0a-a6cb-754c8391fb39" name="Default Changelist" comment="" />
+      <created>1566901425219</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1566901425219</updated>
+      <workItem from="1566901426858" duration="9382000" />
+      <workItem from="1566914241654" duration="1124000" />
+      <workItem from="1566980099520" duration="11027000" />
+      <workItem from="1566994014717" duration="12288000" />
+      <workItem from="1567010399436" duration="215000" />
+      <workItem from="1567010637422" duration="798000" />
+      <workItem from="1567011803539" duration="64000" />
+      <workItem from="1567065708251" duration="1257000" />
+      <workItem from="1567067006846" duration="519000" />
+      <workItem from="1567067610600" duration="438000" />
+      <workItem from="1567068327280" duration="4620000" />
+      <workItem from="1567154209981" duration="149000" />
+      <workItem from="1567154395612" duration="207000" />
+      <workItem from="1567154623722" duration="2821000" />
+      <workItem from="1567158042070" duration="14114000" />
+      <workItem from="1567410629760" duration="12953000" />
+      <workItem from="1567432684835" duration="18558000" />
+      <workItem from="1567500570012" duration="19819000" />
+      <workItem from="1567588497748" duration="49348000" />
+      <workItem from="1567660017215" duration="4213000" />
+      <workItem from="1567669717008" duration="20592000" />
+      <workItem from="1567694712649" duration="6020000" />
+      <workItem from="1567701238809" duration="595000" />
+      <workItem from="1567748065528" duration="17632000" />
+      <workItem from="1568033397797" duration="19000" />
+      <workItem from="1568103535762" duration="1038000" />
+      <workItem from="1568114282355" duration="4011000" />
+      <workItem from="1568122618511" duration="587000" />
+      <workItem from="1568135869005" duration="343000" />
+      <workItem from="1568190348317" duration="40036000" />
+      <workItem from="1568281665110" duration="9023000" />
+      <workItem from="1568370472727" duration="592000" />
+      <workItem from="1568624096644" duration="721000" />
+      <workItem from="1568624959913" duration="27672000" />
+      <workItem from="1568711456469" duration="14443000" />
+      <workItem from="1568792544104" duration="20622000" />
+      <workItem from="1568888850144" duration="1548000" />
+      <workItem from="1568895907725" duration="8263000" />
+      <workItem from="1568968061462" duration="14309000" />
+      <workItem from="1569000636644" duration="6090000" />
+      <workItem from="1569164850367" duration="447000" />
+      <workItem from="1569175006316" duration="7260000" />
+      <workItem from="1569224141795" duration="8470000" />
+      <workItem from="1569239460445" duration="2318000" />
+      <workItem from="1569244279687" duration="43244000" />
+      <workItem from="1569308237344" duration="9713000" />
+      <workItem from="1569322649573" duration="18651000" />
+      <workItem from="1569347569542" duration="12964000" />
+      <workItem from="1569421747288" duration="612000" />
+      <workItem from="1569429448389" duration="951000" />
+      <workItem from="1569483762961" duration="11153000" />
+      <workItem from="1569845651421" duration="3093000" />
+      <workItem from="1570008288069" duration="35475000" />
+      <workItem from="1570089391711" duration="5550000" />
+      <workItem from="1570095294886" duration="23217000" />
+      <workItem from="1570119091684" duration="20447000" />
+      <workItem from="1570140360732" duration="1851000" />
+      <workItem from="1570176326837" duration="12284000" />
+      <workItem from="1570365982030" duration="9797000" />
+      <workItem from="1570377937792" duration="1255000" />
+      <workItem from="1570379995187" duration="18372000" />
+      <workItem from="1570398827787" duration="1612000" />
+      <workItem from="1570401009099" duration="540000" />
+      <workItem from="1570448198598" duration="8265000" />
+      <workItem from="1570456744757" duration="5404000" />
+      <workItem from="1570466665168" duration="15342000" />
+      <workItem from="1570482982795" duration="2834000" />
+      <workItem from="1570526837229" duration="595000" />
+      <workItem from="1570546399643" duration="4697000" />
+      <workItem from="1570609276899" duration="1739000" />
+      <workItem from="1570623768404" duration="2126000" />
+      <workItem from="1570702758957" duration="3258000" />
+      <workItem from="1570790717885" duration="791000" />
+      <workItem from="1570800444728" duration="2697000" />
+      <workItem from="1577464140342" duration="6372000" />
+      <workItem from="1577491197882" duration="541000" />
+      <workItem from="1577539054084" duration="5674000" />
+      <workItem from="1577566781291" duration="8794000" />
+      <workItem from="1577624076295" duration="4560000" />
+      <workItem from="1578001138614" duration="4750000" />
+      <workItem from="1578086208938" duration="3304000" />
+      <workItem from="1578175189834" duration="8332000" />
+      <workItem from="1578229709760" duration="33329000" />
+      <workItem from="1578333744695" duration="14048000" />
+      <workItem from="1578412990046" duration="17109000" />
+      <workItem from="1578504561494" duration="15356000" />
+      <workItem from="1578590298614" duration="1284000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="778338000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1151" y="39" width="1266" height="1442" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49929875" visible="true" weight="0.33333334" />
+      <window_info id="Structure" order="1" sideWeight="0.50070125" side_tool="true" weight="0.28143713" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.21057601" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49943438" weight="0.21898928" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4151515" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.12302577" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.22527015" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.13965087" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Educational.CheckDetails" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.500947" side_tool="true" weight="0.22719735" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.22894333" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.43382353" />
+      <window_info anchor="bottom" id="Inspection Results" order="14" weight="0.18076286" />
+      <window_info anchor="bottom" id="Database Changes" order="15" weight="0.327529" />
+      <window_info anchor="bottom" id="Version Control" order="16" sideWeight="0.49905303" weight="0.22693267" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="CheckStyle" order="1" weight="0.3286771" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.07094847" />
+      <window_info anchor="right" id="Database" order="8" weight="0.09456024" />
+      <window_info anchor="right" id="Maven" order="9" weight="0.21406412" />
+      <window_info anchor="right" id="Bean Validation" order="10" weight="0.1357397" />
+      <window_info anchor="right" id="Coverage" order="11" side_tool="true" weight="0.3296027" />
+      <window_info anchor="right" id="TCPMON" order="12" weight="0.4199796" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49929875" visible="true" weight="0.25575447" />
+      <window_info id="Structure" order="1" sideWeight="0.50070125" side_tool="true" weight="0.28143713" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.21057601" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49943438" visible="true" weight="0.32678133" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4157132" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.123669125" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.22604422" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.14004914" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Educational.CheckDetails" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.500947" side_tool="true" weight="0.22719735" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.23035851" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.43382353" />
+      <window_info anchor="bottom" id="Inspection Results" order="14" weight="0.18076286" />
+      <window_info anchor="bottom" id="Database Changes" order="15" weight="0.327529" />
+      <window_info anchor="bottom" id="Version Control" order="16" sideWeight="0.49905303" weight="0.22719735" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="CheckStyle" order="1" weight="0.3286771" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.07094847" />
+      <window_info anchor="right" id="Database" order="8" weight="0.09456024" />
+      <window_info anchor="right" id="Maven" order="9" weight="0.21406412" />
+      <window_info anchor="right" id="Bean Validation" order="10" weight="0.1357397" />
+      <window_info anchor="right" id="Coverage" order="11" side_tool="true" weight="0.3296027" />
+      <window_info anchor="right" id="TCPMON" order="12" weight="0.4199796" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.html" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/team_4$CouchApplication.ic" NAME="CouchApplication Coverage Results" MODIFIED="1568014448575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/model/SmeUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/model/RetailUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/model/Company.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/resources/templates/new_sme_user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="28" selection-start-line="36" selection-start-column="2" selection-end-line="36" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/model/dao/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/resources/templates/new_retail_user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255">
+          <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="28" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/controller/NewSmeUserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="43" column="52" selection-start-line="43" selection-start-column="52" selection-end-line="43" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/service/CompanyService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#715#716#0" expanded="true" />
+            <element signature="e#762#763#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/controller/NewCompanyEmployeeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="44" column="70" selection-start-line="44" selection-start-column="70" selection-end-line="44" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/resources/templates/new_user_select_type.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/model/BankAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1190">
+          <caret line="70" column="45" selection-start-line="70" selection-start-column="45" selection-end-line="70" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#995#996#0" expanded="true" />
+            <element signature="e#1019#1020#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/resources/templates/transaction.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/controller/NewCompanyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/model/CompanyType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/model/Address.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="59" column="74" selection-start-line="59" selection-start-column="74" selection-end-line="59" selection-end-column="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/resources/templates/account_overflow.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/controller/NewCommonAccountController.java" />
+    <entry file="file://$PROJECT_DIR$/couch/src/main/resources/templates/new_common_account.html" />
+    <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/controller/PersonalPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="553">
+          <caret line="54" column="55" lean-forward="true" selection-start-line="54" selection-start-column="55" selection-end-line="54" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/resources/templates/new_retail_user_success.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/resources/templates/personal_page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="96" selection-start-line="39" selection-start-column="96" selection-end-line="39" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/resources/templates/company_account_details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="10" lean-forward="true" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/resources/templates/bank_account_details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="62" selection-start-line="42" selection-start-column="62" selection-end-line="42" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/resources/templates/login_failed.html" />
+    <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/controller/NewRetailUserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="16" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="717">
+          <caret line="81" column="4" selection-start-line="81" selection-start-column="4" selection-end-line="83" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/resources/templates/company_login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="90" lean-forward="true" selection-start-line="13" selection-start-column="90" selection-end-line="13" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/controller/CompanyPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="52" column="9" lean-forward="true" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/resources/templates/error.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/resources/templates/new_user_selection.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/resources/templates/new_sme_user_success.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/resources/templates/sme_page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="17" lean-forward="true" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/controller/TransactionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="604">
+          <caret line="51" column="21" lean-forward="true" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/controller/BankAccountDetailsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/service/AddEmployeeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/service/BankAccountService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#621#622#0" expanded="true" />
+            <element signature="e#682#683#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/service/CommonAccountService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/service/TransactionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/service/TypeOfUserValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/service/IbanGeneratorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/service/HibernateLab.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="64" column="65" selection-start-line="64" selection-start-column="63" selection-end-line="64" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/model/dao/SmeUserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/model/dao/TransactionRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/service/AddBankAccountService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/service/SmeUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/model/dao/BankAccountRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/model/dao/BankUserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/src/main/resources/templates/new_company.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="95" column="7" selection-start-line="95" selection-start-column="7" selection-end-line="97" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="38" lean-forward="true" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring (couch)|Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring|couch</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
