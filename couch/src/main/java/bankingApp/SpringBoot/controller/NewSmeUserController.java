@@ -39,7 +39,7 @@ public class NewSmeUserController {
     private List<String> roles = new ArrayList<>();
 
     @RequestMapping(value = "newSmeUser")
-    public String newSMEUserHandler(@Valid @ModelAttribute("smeUser") @RequestBody SmeUser smeUser,
+    public String newSmeUserHandler(@Valid @ModelAttribute("smeUser") @RequestBody SmeUser smeUser,
                                     BindingResult bindingResult,
                                     Model model, HttpServletRequest request) {
         HttpSession session = request.getSession(true);

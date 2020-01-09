@@ -38,20 +38,16 @@ public class NewCompanyController implements WebMvcConfigurer {
     SmeUserCompanyValidator validator;
 
     private List<String> companyForm = new ArrayList<>();
-    private List<String> sectors = new ArrayList<>();
     private List<String> roles = new ArrayList<>();
     private List<SmeUser> employees = new ArrayList<>();
 
-
+//
     @GetMapping(value = "couch-zakelijk")
     public String newCompanyHandler(Model model, Company company) {
-        if (companyForm.size() == 0 && sectors.size() == 0) {
-            Collections.addAll(companyForm, "B.V.", "Eenmanszaak", "Vereniging of Stichting", "V.O.F", "Andere ondernemingsvorm");
-            // branch-informatie van KvK
-//            Collections.addAll(sectors, "ICT", "Advies en Consultancy", "Bouw, installatie en infra", "Energie",
-//                    "Financiële dienstverlening", "Water en afval", "Industrie", "Groothandel", "Agrosector", "Horeca", "Onderwijs en training",
-        }
-        model.addAttribute("companyForm", companyForm);
+//        if (companyForm.size() == 0 ) {
+//            Collections.addAll(companyForm, "B.V.", "Eenmanszaak", "Vereniging of Stichting", "V.O.F", "Andere ondernemingsvorm");
+////        }
+//        model.addAttribute("companyForm", companyForm);
 //        model.addAttribute("sectors", sectors);
         return "new_company";
     }
@@ -62,13 +58,12 @@ public class NewCompanyController implements WebMvcConfigurer {
                                     BindingResult bindingResult, SmeUser smeUser, Model model,
                                     HttpServletRequest request) {
         HttpSession session = request.getSession(true);
-        if (roles.size() == 0) {
-            Collections.addAll(roles, "Eigenaar", "Medewerker", "Admin");
-        }
+//        if (roles.size() == 0) {
+//            Collections.addAll(roles, "Eigenaar", "Medewerker", "Admin");
+//        }
         if (bindingResult.hasErrors()) {
-            model.addAttribute("companyForm", companyForm);
-//            model.addAttribute("sectors", sectors);
-            model.addAttribute("company", company);
+//            model.addAttribute("companyForm", companyForm);
+//            model.addAttribute("company", company);
             return "new_company";
         } else {
             BankAccount bankAccount = new BankAccount();
@@ -79,7 +74,7 @@ public class NewCompanyController implements WebMvcConfigurer {
             // saving company in session
             session.setAttribute("company", company);
             model.addAttribute("company", company);
-            model.addAttribute("roles", roles);
+//            model.addAttribute("roles", roles);
             model.addAttribute("smeUser", smeUser);
             return "new_smeUser";
         }

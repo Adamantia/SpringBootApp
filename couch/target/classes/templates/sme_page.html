@@ -77,22 +77,24 @@
     </div>
     <form action="#" th:action="@{newEmployeeRequest}" method="post">
         <p>Add employee:</p>
+        <div class="form-group">
         <div class="row">
             <div class="col">
                 <label for="newbsn">Bsn:</label>
-                <input type="number" name="newbsn" id="newbsn" th:object="${newbsn}" minlength="8" maxlength="9"
+                <input type="number" name="newbsn" id="newbsn" class="form-control" th:object="${newbsn}" minlength="8" maxlength="9"
                        placeholder="bsn number" min="10000000" max="999999999" required>
             </div>
             <div class="col">
                 <label for="newrole">Role:</label>
-                <select id="newrole" name="newrole" th:object="${newrole}" required>
+                <select id="newrole" name="newrole" class="form-control"  th:object="${newrole}" required>
                     <option value="">--Choose--</option>
-                    <option th:each="newrole: ${roles}" th:value="${newrole}" th:utext="${newrole}"></option>
+                    <option th:each="newrole: ${roles}" th:value="${newrole}" class="form-control" th:utext="${newrole}"></option>
                 </select>
             </div>
             <div class="col">
-                <input type="submit" value="Submit">
+                <input type="submit" class="btn btn-primary" value="Submit">
             </div>
+        </div>
         </div>
     </form>
     <br>

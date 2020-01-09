@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.thymeleaf.org">
 <head th:insert="/fragments/header :: header"></head>
 <body>
 <div th:insert="/fragments/navbar :: nav"></div>
@@ -10,21 +10,23 @@
 <br><br>
     <form id="company" action="#" th:action="@{couch-zakelijk}" th:object="${company}" method="post">
         <div class="form-group">
-            <label for="companyForm">What is the activity of your company?</label>
-            <select id="companyForm" th:field="*{companyType}" required class="form-control">
-                <option value=""> --</option>
-                <option th:each="t: ${companyForm}" th:value="${t}" th:text="${t}"></option>
+            <label for="legalEntity">Legal Entity of Company</label>
+            <select id="legalEntity" th:field="*{legalEntity}" required class="form-control" >
+                <option value="">--</option>
+                <option th:each="legalEntity : ${T(bankingApp.SpringBoot.model.enums.CompanyLegalEntity).values()}"
+                        th:value="${legalEntity}"
+                        th:text="${legalEntity.displayEntity}">
+                </option>
             </select>
         </div>
         <div class="form-group">
             <label for="kvk">Chamber of Commerce Number: </label>
-            <input type="text" th:field="*{chamberOfCommerceId}" class="form-control" id="kvk" required minlength="8"
-                   maxlength="9" placeholder="kvk nr"/>
+            <input type="number" th:field="*{chamberOfCommerceId}" class="form-control" id="kvk" required minlength="8"
+                   maxlength="8" placeholder="kvk nr"/>
             <p th:if="${#fields.hasErrors('chamberOfCommerceId')}" th:errors="*{chamberOfCommerceId}">KvK-nummer
                 ongeldig.
             </p>
         </div>
-
         <div class="form-group">
             <label for="companyName">Company Name :</label>
             <input type="text" th:field="*{companyName}" id="companyName" class="form-control" name="companyName"
@@ -34,12 +36,8 @@
 
         <div class="form-group">
             <label for="sector">Choose Company Branche:</label>
-
-<!--            <select id="sector" th:field="*{sector}" required class="form-control">-->
-<!--                <option value=""> &#45;&#45;</option>-->
-<!--                <option th:each="sector: ${sectors}" th:value="${sector}" th:utext="${sector}"></option>-->
-<!--            </select>-->
-            <select  id="sector" th:field="*{sector}" required class="form-control" >
+            <select id="sector" th:field="*{sector}" required class="form-control" >
+                <option value="">--</option>
                 <option th:each="sector : ${T(bankingApp.SpringBoot.model.enums.CompanySector).values()}"
                         th:value="${sector}"
                         th:text="${sector.displayName}">
