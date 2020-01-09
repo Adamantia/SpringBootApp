@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">>
+<head th:insert="/fragments/header :: header"> </head>
+<body>
+<div th:insert="/fragments/navbar :: nav"></div>
+<div class="p-3 mb-2 bg-primary text-white"><span class="marginl40" th:text="${fullNames}"></span>
+    <div class="btn-group dropright">
+        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Options
+        </button>
+        <div class="dropdown-menu">
+            <h6 class="dropdown-header">Options</h6>
+            <a class="dropdown-item" th:href="@{transactionRequest(id=${iban})}">Make a transaction</a>
+            <a class="dropdown-item" href="/overview">Personal Page</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/logout">Logout</a>
+        </div>
+    </div>
+</div>
+
+<div class="p-3 mb-2 bg-secondary text-white">
+    <h1>Bank Account Details</h1>
+    <table class="table table-hover">
+        <tr>
+            <th>Bank Account Number</th>
+            <th>Balance</th>
+        </tr>
+        <tr>
+            <td th:text="${iban}"></td>
+            <td th:text="${balance}"></td>
+        </tr>
+    </table>
+
+    <table class="table" th:if="${transactionsSize}!=0">
+        <tr>
+            <th>Date</th>
+            <th>Account</th>
+            <th>Description</th>
+            <th>Transaction to or from</th>
+            <th>Amount</th>
+        </tr>
+        <tr th:each="transaction: ${allTransactions}">
+            <td th:text="${transaction.transactionDate}"></td>
+            <td th:text="${transaction.bankAccount.IBAN == iban} ? ${transaction.bankAccountTo} : ${transaction.bankAccount}"></td>
+            <td th:text="${transaction.description}"></td>
+            <td th:text="${transaction.bankAccount.IBAN == iban} ? 'From': 'To'"></td>
+            <td><span th:text="${#numbers.formatDecimal(transaction.amount, 1, 2)}"/></td>
+        </tr>
+    </table>
+
+</div>
+<div th:insert="/fragments/footer :: footer"></div>
+</body>
+</html>

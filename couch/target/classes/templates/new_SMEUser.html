@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:insert="/fragments/header :: header"></head>
+<body>
+<div th:insert="/fragments/navbar :: nav"></div>
+<div class="row"></div>
+<div class="p-3 mb-2 bg-primary text-white">Couch Bank nieuwe zakelijke klant
+<div class="p-3 mb-2 bg-secondary text-white"><h2>2. Please fill in your details below. Fields with * are
+    mandatory.</h2>
+<br><br>
+<form id="smeUser" action="#" th:action="@{newSMEUser}" th:object="${smeUser}" method="post">
+    <div class="form-group">
+        <label for="role">Choose Role:</label>
+        <select id="role" th:field="*{roleEmployee}" name="roleEmployee" required class="form-control">
+            <option value=""> --</option>
+            <option th:each="role: ${roles}" th:value="${role}" th:utext="${role}"></option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="firstName">First Name: *</label>
+        <input id="firstName" type="text" th:field="*{firstName}" name="firstName" class="form-control" required
+               placeholder="voornaam">
+    </div>
+
+    <div class="form-group">
+        <label for="middleName">Middle Name:</label>
+        <input id="middleName" type="text" th:field="*{middleName}" name="middleName" class="form-control"
+               placeholder="middlenaam">
+    </div>
+
+    <div class="form-group">
+        <label for="lastName">Surname: *</label>
+        <input id="lastName" type="text" th:field="*{lastName}" name="lastName" class="form-control" required
+               placeholder="achternaam">
+    </div>
+
+    <div class="form-group">
+        <label for="bsn">BSN: *</label>
+        <input id="bsn" type="text" th:field="*{bsn}" name="bsn" class="form-control" required placeholder="12345678"
+               minlength="8"
+               maxlength="8"/>
+        <p th:if="${#fields.hasErrors('bsn')}">Bsn ongeldig.</p>
+    </div>
+
+    <div class="form-group">
+        <label for="userName">Choose username: *</label>
+        <input type="text" name="userName" id="userName" class="form-control" required th:field="*{userName}">
+        <p th:if="${#fields.hasErrors('userName')}" th:errors="*{userName}"> Username invalid.</p>
+    </div>
+
+    <div class="form-group">
+        <label for="userPassword">Password: *</label>
+        <input type="text" name="userPassword" id="userPassword" required class="form-control"
+               th:field="*{userPassword}">
+        <p th:if="${#fields.hasErrors('userPassword')}">Password invalid.</p>
+    </div>
+    <div class="form-group">
+        <br>
+        <button name="submit" type="submit" class="btn btn-primary">Confirm</button>
+    </div>
+</form>
+</div>
+<div th:insert="/fragments/footer :: footer"></div>
+</body>
+</html>

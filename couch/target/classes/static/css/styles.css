@@ -1,0 +1,91 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.copyright {
+    margin-top: 30px;
+    text-align: center!important;
+}
+
+.card-body{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 4% 10%;
+
+}
+.logout {
+    text-align: right;
+}
+
+
+.big-heading {
+    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+    font-size: 3.5rem;
+    line-height: 1.5;
+}
+
+.container{
+    padding: 4% 10%;
+    position: center;
+}
+
+.container-end{
+    padding: 4% 10%;
+}
+
+body {
+    background-color: aliceblue!important;
+}
+
+.head {
+    background-color: aliceblue!important;
+
+}
+
+form {
+    color: rgb(52,50,83);
+    max-width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav {
+    color: rgb(255, 255, 255);
+    /*margin-left: 40px;*/
+    /*margin-right: 40px;*/
+}
+
+.navbar-nav {
+    margin-left: 100px;
+    margin-right: 40px;
+
+}
+
+.nav-link {
+    color: black!important;
+}
+
+table {
+    color: rgb(52,50,83);
+    width: 30%;
+}
+.bg-secondary {
+    padding: 5% 5%;
+    color: #112D32!important;
+    background-color: white !important;
+}
+.bg-primary {
+    background: linear-gradient(90deg, rgba(163,170,167,1) 29%, rgba(79,167,153,1) 63%, rgba(11,34,77,1) 100%) !important;
+
+}
+
+.form-control {
+    background-color: ghostwhite!important;
+}
+
+a {
+ color: #000000;
+}
+
+

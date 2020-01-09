@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:insert="/fragments/header :: header"></head>
+<body>
+<div th:insert="/fragments/navbar :: nav"></div>
+<div class="row"></div>
+<div class="p-3 mb-2 bg-primary text-white"><span class="marginl40">Welcome <span
+        th:text="${retailUserFullName}"></span></span>
+    <span><a href="/logout">Log Out</a></span></div>
+<div class="p-3 mb-2 bg-secondary text-white"><span class="marginl40"></span>
+</div>
+<div class="container">
+    <div th:unless="${#lists.isEmpty(allBankAccounts)}">
+        <table class="table table-sm" title="Overzicht">
+            <thead title="Rekeningen">
+            <tr>
+                <th>Bankrekening(IBAN)</th>
+                <th>Saldo</th>
+                <th></th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="bankAccount: ${allBankAccounts}">
+                <td><a th:href="@{/bankAccountDetails(id=${bankAccount.bankAccountId})}"
+                       th:text="${bankAccount.iBAN}"></a></td>
+                <td><span th:text="${#numbers.formatDecimal(bankAccount.balance, 1, 2)}"></span></td>
+                <td><a class="btn btn-info" role="button"
+                       th:href="@{bankAccountDetails(id=${bankAccount.bankAccountId})}">Account Details</a></td>
+                <td><a th:href="@{transactionRequest(id=${bankAccount.bankAccountId})}"
+                       class="btn btn-info" role="button"> Make a transaction</a></td>
+            </tr>
+            </tbody>
+        </table>
+        <br>
+        <br>
+    </div>
+</div>
+<div>
+    <a class="btn btn-primary" role="button" th:href="@{newAccountRequest}">Open New Account</a>
+</div>
+<br>
+<div th:insert="/fragments/footer :: footer"></div>
+</body>
+</html>

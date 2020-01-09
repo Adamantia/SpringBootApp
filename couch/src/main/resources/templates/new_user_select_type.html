@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:insert="/fragments/header :: header"> </head>
+<body>
+<div th:insert="/fragments/navbar :: nav"></div>
+<div class="row"></div>
+<div class="p-3 mb-2 bg-primary text-white">Welcome <span th:text="${retailUserFullName}"></span></div>
+<div class="p-3 mb-2 bg-secondary text-white">
+    <br>
+    <h3>Select the account type you wish to open with Couch Bank:</h3>
+    <br>
+    <a href="newRetailUser" class="btn btn-primary btn-lg">I want to open a personal account</a>
+    <a href="couch-zakelijk" class="btn btn-primary btn-lg">I want to open a business account</a>
+    <br>
+    <br>
+</div>
+<a href="/">Go back</a>
+<div th:insert="/fragments/footer :: footer"></div>
+</body>
+</html>

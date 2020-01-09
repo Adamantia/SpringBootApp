@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:insert="/fragments/header :: header"></head>
+<body>
+<div th:insert="/fragments/navbar :: nav"></div>
+<div class="row"></div>
+<div class="p-3 mb-2 bg-primary text-white">New Business Account Form</div>
+<div class="p-3 mb-2 bg-secondary text-white"><h2><label for="company">1. Please fill in your details below. </label>
+</h2>
+<br><br>
+    <form id="company" action="#" th:action="@{couch-zakelijk}" th:object="${company}" method="post">
+        <div class="form-group">
+            <label for="companyForm">What is the activity of your company?</label>
+            <select id="companyForm" th:field="*{companyType}" required class="form-control">
+                <option value=""> --</option>
+                <option th:each="t: ${companyForm}" th:value="${t}" th:text="${t}"></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="kvk">Chamber of Commerce Number: </label>
+            <input type="text" th:field="*{chamberOfCommerceId}" class="form-control" id="kvk" required minlength="8"
+                   maxlength="9" placeholder="kvk nr"/>
+            <p th:if="${#fields.hasErrors('chamberOfCommerceId')}" th:errors="*{chamberOfCommerceId}">KvK-nummer
+                ongeldig.
+            </p>
+        </div>
+
+        <div class="form-group">
+            <label for="companyName">Company Name :</label>
+            <input type="text" th:field="*{companyName}" id="companyName" class="form-control" name="companyName"
+                   required placeholder="handelsnaam"/>
+            <p th:if="${#fields.hasErrors('companyName')}" th:errors="*{companyName}">Naam ongeldig.</p>
+        </div>
+
+        <div class="form-group">
+            <label for="sector">Choose Company Branche:</label>
+
+            <select id="sector" th:field="*{sector}" required class="form-control">
+                <option value=""> --</option>
+                <option th:each="sector: ${sectors}" th:value="${sector}" th:utext="${sector}"></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="Street">Street: *</label>
+            <input type="text" name="streetName" id="Street" required class="form-control"
+                   th:field="*{address.streetName}" maxlength="30">
+            <p th:if="${#fields.hasErrors('address.streetName')}">Streetname invalid.</p>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <label for="streetNumber">Street Number: *</label>
+                <input type="number" name="streetNumber" id="streetNumber" min="0" required class="form-control"
+                       placeholder="street number" th:field="*{address.streetNumber}"/>
+                <p th:if="${#fields.hasErrors('address.streetNumber')}">Street Number invalid.</p>
+            </div>
+            <div class="col">
+                <label for="extension">Apartment Number: </label>
+                <input type="text" name="extension" id="extension" class="form-control"
+                       th:field="*{address.extension}"/>
+                <p th:if="${#fields.hasErrors('address.extension')}">Apartment Number invalid.</p>
+            </div>
+            <div class="col">
+                <label for="zipcode">Postcode: *</label>
+                <input type="text" name="zipcode" id="zipcode" class="form-control" required
+                       th:field="*{address.zipcode}" pattern="[1-9][0-9]{3}[ ]?([a-z]|[A-Z]){2}"/>
+                <p th:if="${#fields.hasErrors('address.zipcode')}">Postcode invalid.</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="city">City: *</label>
+            <input type="text" name="city" id="city" class="form-control" required th:field="*{address.city}">
+            <p th:if="${#fields.hasErrors('address.city')}">City invalid.</p>
+        </div>
+
+        <div class="form-group">
+            <label for="country">Country: *</label>
+            <input type="text" name="country" id="country" class="form-control" required th:field="*{address.country}">
+            <p th:if="${#fields.hasErrors('address.country')}">Country invalid.</p>
+        </div>
+
+        <div class="form-group">
+            <label for="tel">Phonenumber: *</label>
+            <input type="text" name="tel" id="tel" class="form-control" required th:field="*{phoneNumber}" minlength="9"
+                   maxlength="11">
+            <p th:if="${#fields.hasErrors('phoneNumber')}">Tel invalid.</p>
+        </div>
+        <div class="form-group">
+            <label for="email">Email: *</label>
+            <input type="email" name="tel" id="email" class="form-control" required th:field="*{email}">
+            <p th:if="${#fields.hasErrors('email')}">Email invalid.</p>
+        </div>
+
+        <br>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Next</button>
+        </div>
+    </form>
+    <a href="/">Go Back</a>
+<div th:insert="/fragments/footer :: footer"></div>
+</div>
+</body>
+</html>
