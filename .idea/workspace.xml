@@ -43,15 +43,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/service/IbanGeneratorService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/service/HibernateLab.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="969">
@@ -72,11 +63,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/couch/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="527">
-              <caret line="31" column="38" lean-forward="true" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+              <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/couch/.gitattributes">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="32" lean-forward="true" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -196,7 +196,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/service/Naming.java" />
         <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/model/dao/BankAccountRepository.java" />
         <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/model/dao/RetailUserRepository.java" />
         <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/service/CommonAccountService.java" />
@@ -247,6 +246,7 @@
         <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/service/AddBankAccountService.java" />
         <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/service/SmeUserService.java" />
         <option value="$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/model/dao/BankUserRepository.java" />
+        <option value="$PROJECT_DIR$/couch/.gitattributes" />
       </list>
     </option>
   </component>
@@ -629,12 +629,12 @@
       <workItem from="1578333744695" duration="14048000" />
       <workItem from="1578412990046" duration="17109000" />
       <workItem from="1578504561494" duration="15356000" />
-      <workItem from="1578590298614" duration="1284000" />
+      <workItem from="1578590298614" duration="1387000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="778338000" />
+    <option name="totallyTimeSpent" value="778441000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -646,7 +646,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1151" y="39" width="1266" height="1442" extended-state="0" />
+    <frame x="593" y="50" width="1266" height="1442" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49929875" visible="true" weight="0.33333334" />
       <window_info id="Structure" order="1" sideWeight="0.50070125" side_tool="true" weight="0.28143713" />
@@ -792,16 +793,6 @@
     <SUITE FILE_PATH="coverage/team_4$CouchApplication.ic" NAME="CouchApplication Coverage Results" MODIFIED="1568014448575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/model/SmeUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/couch/src/main/java/bankingApp/SpringBoot/model/RetailUser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1174,7 +1165,14 @@
     <entry file="file://$PROJECT_DIR$/couch/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
-          <caret line="31" column="38" lean-forward="true" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+          <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/couch/.gitattributes">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="32" lean-forward="true" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
         </state>
       </provider>
     </entry>
