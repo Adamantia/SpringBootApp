@@ -12,7 +12,7 @@ public class Transaction implements Comparable<Transaction> { //implements Seria
 
     @Id
     @Column(name="transaction_id")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int transactionId;
     private String description;
     @NotNull

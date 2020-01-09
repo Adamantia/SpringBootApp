@@ -33,7 +33,7 @@ public class LoginController {
     BankUser bankUser = new BankUser();
 
 
-    @GetMapping(value = "/")
+    @RequestMapping({"", "/", "/index"})
     public String indexHandler(Model model, HttpSession session) {
         // destroy session
         if (session != null) {

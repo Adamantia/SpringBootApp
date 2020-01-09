@@ -19,7 +19,7 @@ import javax.validation.constraints.NotEmpty;
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class User  {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int userId;
     @Column(name = "userName", unique = true)
     @NotEmpty

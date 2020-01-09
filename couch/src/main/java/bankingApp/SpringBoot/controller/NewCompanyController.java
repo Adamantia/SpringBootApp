@@ -51,6 +51,8 @@ public class NewCompanyController implements WebMvcConfigurer {
             Collections.addAll(sectors, "ICT", "Advies en Consultancy", "Bouw, installatie en infra", "Energie",
                     "Financiële dienstverlening", "Water en afval", "Industrie", "Groothandel", "Agrosector", "Horeca", "Onderwijs en training",
                     "Persoonlijke dienstverlening en not-for-profit", "Gezondheidszorg", "Vervoer, post en opslag");
+
+            company.
         }
         model.addAttribute("companyForm", companyForm);
         model.addAttribute("sectors", sectors);

@@ -10,7 +10,7 @@ import java.util.*;
 public class BankAccount {
     @Id
     @Column(name="bankAccount_id")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long bankAccountId;
     @Column(name ="iban")
     private String iban;
