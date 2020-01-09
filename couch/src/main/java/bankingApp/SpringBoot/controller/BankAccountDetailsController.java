@@ -32,7 +32,6 @@ public class BankAccountDetailsController {
         HttpSession session = request.getSession(true);
         BankAccount clickedBankAccount = bankAccountService.findByBankAccountId(bankAccountId);
         String retailUserFullNames = commonAccountService.namingAccounts(clickedBankAccount);
-//        session.setAttribute("clickedIBAN", clickedBankAccount.getIBAN());
         List <Transaction> transactionList = clickedBankAccount.getTransactions();
         Collections.reverse(transactionList);
         model.addAttribute("fullNames", retailUserFullNames);
@@ -41,10 +40,7 @@ public class BankAccountDetailsController {
         model.addAttribute("transactionsSize", transactionList.size());
         model.addAttribute("allTransactions", transactionList);
         session.setAttribute("clickedBankAccount", clickedBankAccount);
-    //    session.setAttribute("bankAccountId", clickedBankAccount.getBankAccountId());
         session.setAttribute("fullNames", retailUserFullNames);
         return "bank_account_details";
     }
-
-
 }

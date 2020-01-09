@@ -22,8 +22,8 @@ public class Company {
     private String companyName;
     @NotEmpty
     private String companyType;
-    @NotEmpty
-    private String sector;
+    @Enumerated(value = EnumType.STRING)
+    private CompanySector sector;
     @OneToOne(cascade = CascadeType.ALL)
     private Address address;
     @NotEmpty
@@ -46,7 +46,7 @@ public class Company {
     }
 
     public Company(int chamberOfCommerceId,
-                   @NotEmpty String companyName, @NotEmpty String companyType, @NotEmpty String sector,
+                   @NotEmpty String companyName, @NotEmpty String companyType, CompanySector sector,
                    Address address, @NotEmpty @Size(min = 9, max = 11) String phoneNumber,
                    int pinCode, boolean hasPin, List<SmeUser> employees,
                    List<BankAccount> companyAccounts, BankUser accountManager, String email) {
@@ -66,7 +66,7 @@ public class Company {
         this.email = email;
     }
 
-    public Company(int chamberOfCommerceId, @NotEmpty String companyName, @NotEmpty String companyType, @NotEmpty String sector, Address address,  String phoneNumber,
+    public Company(int chamberOfCommerceId, @NotEmpty String companyName, @NotEmpty String companyType, CompanySector sector, Address address,  String phoneNumber,
                    @NotEmpty @Email String email) {
         this.chamberOfCommerceId = chamberOfCommerceId;
         this.companyName = companyName;
@@ -125,11 +125,11 @@ public class Company {
         this.companyName = companyName;
     }
 
-    public String getSector() {
+    public CompanySector getSector() {
         return sector;
     }
 
-    public void setSector(String sector) {
+    public void setSector(CompanySector sector) {
         this.sector = sector;
     }
 
