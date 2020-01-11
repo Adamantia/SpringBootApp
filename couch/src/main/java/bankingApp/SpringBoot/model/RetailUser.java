@@ -20,8 +20,8 @@ public class RetailUser extends User {
 
     @bsnDoesNotExistConstraint
     @NotNull
-    @Min(value = 10000000, message = "BSN must be between 8 and 9 characters without spaces.")  //AMS: aantal posities mag zijn: 8
-    @Max(value = 999999999, message = "BSN must be between 8 and 9 characters without spaces..") //AMS: 8 of 9 posities voldoen
+    @Min(value = 10000000, message = "BSN must be between 8 and 9 characters without spaces.")
+    @Max(value = 999999999, message = "BSN must be between 8 and 9 characters without spaces..")
     private int bsn;
     @NotEmpty
     private String firstName;

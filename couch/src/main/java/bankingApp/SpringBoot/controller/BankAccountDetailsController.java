@@ -3,7 +3,6 @@ package bankingApp.SpringBoot.controller;
 import bankingApp.SpringBoot.model.BankAccount;
 import bankingApp.SpringBoot.service.BankAccountService;
 import bankingApp.SpringBoot.model.Transaction;
-import bankingApp.SpringBoot.service.CommonAccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,19 +18,17 @@ public class BankAccountDetailsController {
     @Autowired
     BankAccountService bankAccountService;
 
-    @Autowired
-    CommonAccountService commonAccountService;
 
     @GetMapping(value = "/bankAccountDetails")
     public String bankAccountDetailsHandler(@RequestParam("id") long bankAccountId, Model model, HttpServletRequest request) {
         // log in session
         HttpSession session = request.getSession(true);
         BankAccount clickedBankAccount = bankAccountService.findByBankAccountId(bankAccountId);
-        String retailUserFullNames = commonAccountService.namingAccounts(clickedBankAccount);
+        String retailUserFullNames = clickedBankAccount.getRetailUsers().get(0).getFullName();
         List <Transaction> transactionList = clickedBankAccount.getTransactions();
         Collections.reverse(transactionList);
         model.addAttribute("fullNames", retailUserFullNames);
-        model.addAttribute("iban", clickedBankAccount.getIBAN());
+        model.addAttribute("iban", clickedBankAccount.getIban());
         model.addAttribute("balance", clickedBankAccount.twoDecimalBalance(clickedBankAccount.getBalance()));
         model.addAttribute("transactionsSize", transactionList.size());
         model.addAttribute("allTransactions", transactionList);

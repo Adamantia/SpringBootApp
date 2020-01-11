@@ -1,5 +1,10 @@
 package bankingApp.SpringBoot.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 import javax.validation.constraints.*;
 
@@ -8,6 +13,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Entity
+@Getter
+@Setter
+@AllArgsConstructor
 public class Transaction implements Comparable<Transaction> { //implements Serializable {
 
     @Id
@@ -39,56 +47,7 @@ public class Transaction implements Comparable<Transaction> { //implements Seria
         this.description = description;
     }
 
-
-    public int getTransactionId() {
-        return transactionId;
-    }
-
-    public void setTransactionId(int transactionId) {
-        this.transactionId = transactionId;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public double getAmount() {
-        return amount;
-    }
-
-    public void setAmount(double amount) {
-        this.amount = amount;
-    }
-
-    public Date getTransactionDate() {
-        return transactionDate;
-    }
-
-    public void setTransactionDate(Date transactionDate) {
-        this.transactionDate = transactionDate;
-    }
-
-    public BankAccount getBankAccount() {
-        return bankAccount;
-    }
-
-    public void setBankAccount(BankAccount bankAccount) {
-        this.bankAccount = bankAccount;
-    }
-
-    public BankAccount getBankAccountTo() {
-        return bankAccountTo;
-    }
-
-    public void setBankAccountTo(BankAccount bankAccountTo) {
-        this.bankAccountTo = bankAccountTo;
-    }
-
-    public String getTransactionDateFormatted() {
+    private String getTransactionDateFormatted() {
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         return dateFormat.format(transactionDate);
     }

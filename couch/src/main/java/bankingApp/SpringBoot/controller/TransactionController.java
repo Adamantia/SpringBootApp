@@ -49,11 +49,11 @@ public class TransactionController implements WebMvcConfigurer {
         HttpSession session = request.getSession (true);
         BankAccount bankAccountFrom = (BankAccount) session.getAttribute("clickedBankAccount");
         model.addAttribute("bankAccountType", bankAccountFrom.getAccountType());
-        if(transaction.getBankAccountTo().getIBAN().equals(transaction.getBankAccount().getIBAN())
+        if(transaction.getBankAccountTo().getIban().equals(transaction.getBankAccount().getIban())
                 || bindingResult.hasErrors()){
             model.addAttribute("date", transaction.getTransactionDay());
-            model.addAttribute("bankAccount", bankAccountFrom.getIBAN());
-            model.addAttribute("bankAccountTo", transaction.getBankAccountTo().getIBAN());
+            model.addAttribute("bankAccount", bankAccountFrom.getIban());
+            model.addAttribute("bankAccountTo", transaction.getBankAccountTo().getIban());
             model.addAttribute("userName", (String) session.getAttribute("userName"));
             model.addAttribute("balance", bankAccountFrom.getBalance());
             return "transaction";

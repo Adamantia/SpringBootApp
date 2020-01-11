@@ -18,12 +18,12 @@ import java.util.List;
 @NoArgsConstructor
 public class Company {
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int companyId;
     @Column(name = "kvkNr", unique = true)
     @NotNull
-    @Min(value = 10000000, message  = "Chamber of Commerce number must be 8 digits with no spaces")
-    @Max(value = 99999999,  message  = "Chamber of Commerce number must be 8 digits with no spaces")
+    @Min(value = 10000000, message = "Chamber of Commerce number must be 8 digits with no spaces")
+    @Max(value = 99999999, message = "Chamber of Commerce number must be 8 digits with no spaces")
     @kvkNumberDoesNotExistConstraint(message = "Chamber of Commerce number already in use.")
     private int chamberOfCommerceId;
     @NotEmpty
@@ -35,14 +35,14 @@ public class Company {
     @OneToOne(cascade = CascadeType.ALL)
     private Address address;
     @NotEmpty
-    @Size(min= 9, max=11)
+    @Size(min = 9, max = 11)
     private String phoneNumber;
     @NotEmpty
     @Email
     private String email;
     private int pinCode;
     private boolean hasPin;
-    @OneToMany(mappedBy="company", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "company", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<SmeUser> employees;
     @ManyToMany(cascade = CascadeType.ALL)
     private List<BankAccount> companyAccounts = new ArrayList<>();
@@ -84,11 +84,11 @@ public class Company {
     }
 
 
-    public void addCompanyEmployee(SmeUser smeUser){
+    public void addCompanyEmployee(SmeUser smeUser) {
         employees.add(smeUser);
     }
 
-    public void addCompanyAccount(BankAccount bankAccount){
+    public void addCompanyAccount(BankAccount bankAccount) {
         companyAccounts.add(bankAccount);
     }
 

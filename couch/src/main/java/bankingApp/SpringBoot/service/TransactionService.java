@@ -28,11 +28,11 @@ public class TransactionService {
 
     public String TransactionCalculation(Transaction transaction, BankAccount bankAccountFrom) {
 
-        if (transaction.getBankAccountTo().getIBAN().equals(transaction.getBankAccount().getIBAN())) {
+        if (transaction.getBankAccountTo().getIban().equals(transaction.getBankAccount().getIban())) {
             return "Please enter an account number other than your own";
         }
         // check that bank account to exists
-        BankAccount bankAccountTo = bankAccountService.findByIban(transaction.getBankAccountTo().getIBAN());
+        BankAccount bankAccountTo = bankAccountService.findByIban(transaction.getBankAccountTo().getIban());
         if (bankAccountTo == null) {
             return "Transaction failed. Iban not found.";
         }

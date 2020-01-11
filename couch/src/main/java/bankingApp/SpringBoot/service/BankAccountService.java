@@ -1,9 +1,12 @@
 package bankingApp.SpringBoot.service;
 
 import bankingApp.SpringBoot.model.BankAccount;
+import bankingApp.SpringBoot.model.RetailUser;
 import bankingApp.SpringBoot.model.dao.BankAccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class BankAccountService {
@@ -13,6 +16,7 @@ public class BankAccountService {
 
     @Autowired
     IbanGeneratorService ibanGeneratorService;
+
 
     public BankAccount findByBankAccountId(long bankAccount) {
         return bankAccountRepository.findByBankAccountId(bankAccount);
@@ -24,7 +28,7 @@ public class BankAccountService {
 
 
     public BankAccount newBankAccount(BankAccount bankAccount){
-        if (bankAccount.getIBAN() == null) {
+        if (bankAccount.getIban() == null) {
             setIban(bankAccount);
         }
         bankAccountRepository.save(bankAccount);
@@ -32,9 +36,11 @@ public class BankAccountService {
     }
 
     public void setIban(BankAccount bankAccount) {
-        bankAccount.setIBAN(ibanGeneratorService.generateIban());
-        if (findByIban(bankAccount.getIBAN()) != null) {
-            bankAccount.setIBAN(ibanGeneratorService.generateIban());
+        bankAccount.setIban(ibanGeneratorService.generateIban());
+        if (findByIban(bankAccount.getIban()) != null) {
+            bankAccount.setIban(ibanGeneratorService.generateIban());
         }
     }
+
+
 }

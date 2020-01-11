@@ -23,7 +23,7 @@ public class RetailUserService {
 
     public void newRetailUser(RetailUser retailUser){
         BankAccount bankAccount = new BankAccount();
-        bankAccount.setAccountType("Particulier");
+        bankAccount.setAccountType("Private");
         retailUser.addBankAccount(bankAccount);
         bankAccountService.newBankAccount(bankAccount);
         retailUser.setRole("Retail");

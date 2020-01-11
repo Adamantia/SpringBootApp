@@ -128,7 +128,7 @@ public class CompanyPageController {
         transactionList.addAll(transactionToList);
         Collections.sort(transactionList);
         Collections.reverse(transactionList);
-        model.addAttribute("iban", clickedBankAccount.getIBAN());
+        model.addAttribute("iban", clickedBankAccount.getIban());
         model.addAttribute("balance", clickedBankAccount.twoDecimalBalance(clickedBankAccount.getBalance()));
         model.addAttribute("allTransactions",  transactionList);
         model.addAttribute("fullNames", session.getAttribute("fullNames"));
