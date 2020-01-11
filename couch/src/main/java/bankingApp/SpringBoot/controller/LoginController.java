@@ -41,10 +41,7 @@ public class LoginController {
         }
         // initiate database
         lab.dbinit();
-        model.addAttribute("retailUser", retailUser);
-        model.addAttribute("smeUser", smeUser);
         model.addAttribute("user", user);
-        model.addAttribute("bankUser", bankUser);
         return "index";
     }
 
@@ -54,10 +51,7 @@ public class LoginController {
         // check if user is a Retail User & validate password
         if (!(validatorType.validateRetailUser(user)) || !validator.validateMemberPassword(user) ) {
             String message = "Invalid username and/or password. Please try again";
-            model.addAttribute("retailUser", retailUser);
-            model.addAttribute("smeUser", smeUser);
             model.addAttribute("user", user);
-            model.addAttribute("bankUser", bankUser);
             model.addAttribute("message", message);
             return "index";
         }

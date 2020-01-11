@@ -24,31 +24,16 @@ import java.util.List;
 @Controller
 public class NewCompanyController implements WebMvcConfigurer {
 
-
-    @Autowired
-    SmeUserService smeUserService;
-
     @Autowired
     BankAccountService bankAccountService;
 
     @Autowired
     CompanyService companyService;
 
-    @Autowired
-    SmeUserCompanyValidator validator;
-
-    private List<String> companyForm = new ArrayList<>();
     private List<String> roles = new ArrayList<>();
-    private List<SmeUser> employees = new ArrayList<>();
 
-//
     @GetMapping(value = "couch-zakelijk")
     public String newCompanyHandler(Model model, Company company) {
-//        if (companyForm.size() == 0 ) {
-//            Collections.addAll(companyForm, "B.V.", "Eenmanszaak", "Vereniging of Stichting", "V.O.F", "Andere ondernemingsvorm");
-////        }
-//        model.addAttribute("companyForm", companyForm);
-//        model.addAttribute("sectors", sectors);
         return "new_company";
     }
 
@@ -58,12 +43,10 @@ public class NewCompanyController implements WebMvcConfigurer {
                                     BindingResult bindingResult, SmeUser smeUser, Model model,
                                     HttpServletRequest request) {
         HttpSession session = request.getSession(true);
-//        if (roles.size() == 0) {
-//            Collections.addAll(roles, "Eigenaar", "Medewerker", "Admin");
-//        }
+        if (roles.size() == 0) {
+            Collections.addAll(roles, "Eigenaar", "Medewerker", "Admin");
+        }
         if (bindingResult.hasErrors()) {
-//            model.addAttribute("companyForm", companyForm);
-//            model.addAttribute("company", company);
             return "new_company";
         } else {
             BankAccount bankAccount = new BankAccount();
@@ -74,12 +57,11 @@ public class NewCompanyController implements WebMvcConfigurer {
             // saving company in session
             session.setAttribute("company", company);
             model.addAttribute("company", company);
-//            model.addAttribute("roles", roles);
+            model.addAttribute("roles", roles);
             model.addAttribute("smeUser", smeUser);
             return "new_smeUser";
         }
     }
-
 }
 
 

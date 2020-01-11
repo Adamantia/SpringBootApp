@@ -3,7 +3,6 @@ package bankingApp.SpringBoot.controller;
 import bankingApp.SpringBoot.model.BankAccount;
 import bankingApp.SpringBoot.model.Transaction;
 import bankingApp.SpringBoot.model.User;
-import bankingApp.SpringBoot.model.dao.BankAccountRepository;
 import bankingApp.SpringBoot.service.BankAccountService;
 import bankingApp.SpringBoot.service.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;

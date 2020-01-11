@@ -63,6 +63,7 @@ public class CompanyPageController {
         model.addAttribute("userName", loggedInUser.getUserName());
         model.addAttribute("role", loggedInUser.getRoleEmployee());
         model.addAttribute("company", company);
+        model.addAttribute("companyLegalEntity", company.getLegalEntity().getDisplayEntity());
         model.addAttribute("employees", company.getEmployees());
         model.addAttribute("allBankAccounts", loggedInUser.getCompany().getCompanyAccounts());
         model.addAttribute("newbsn", 0);

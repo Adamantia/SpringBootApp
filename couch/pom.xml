@@ -13,7 +13,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>couch</name>
     <description>Bank App Spring Framework</description>
-<packaging>jar</packaging><!--remote server config - BvB -->
+<packaging>jar</packaging><!--remote server config  -->
     <properties>
         <java.version>11</java.version>
     </properties>
@@ -40,7 +40,7 @@
             <groupId>nz.net.ultraq.thymeleaf</groupId>
             <artifactId>thymeleaf-layout-dialect</artifactId>
         </dependency>
-        <!-- JPA Data) -->
+        <!-- JPA Data -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -64,6 +64,12 @@
             <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.10</version>
+            <scope>provided</scope>
+        </dependency>
 
 
     </dependencies>
@@ -73,11 +79,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <!--remote server config - BvB -->
                 <configuration>
                     <executable>true</executable>
                 </configuration>
-                <!-- -->
             </plugin>
         </plugins>
     </build>

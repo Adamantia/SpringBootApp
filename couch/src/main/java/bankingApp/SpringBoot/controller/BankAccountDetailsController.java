@@ -2,7 +2,6 @@ package bankingApp.SpringBoot.controller;
 
 import bankingApp.SpringBoot.model.BankAccount;
 import bankingApp.SpringBoot.service.BankAccountService;
-import bankingApp.SpringBoot.service.TransactionService;
 import bankingApp.SpringBoot.model.Transaction;
 import bankingApp.SpringBoot.service.CommonAccountService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,9 +15,6 @@ import java.util.List;
 
 @Controller
 public class BankAccountDetailsController {
-
-    @Autowired
-    TransactionService transactionService;
 
     @Autowired
     BankAccountService bankAccountService;

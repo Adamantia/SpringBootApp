@@ -21,8 +21,8 @@
         </div>
         <div class="form-group">
             <label for="kvk">Chamber of Commerce Number: </label>
-            <input type="number" th:field="*{chamberOfCommerceId}" class="form-control" id="kvk" required minlength="8"
-                   maxlength="8" placeholder="kvk nr"/>
+            <input type="number" th:field="*{chamberOfCommerceId}" class="form-control" id="kvk" required min="10000000"
+                   max="99999999" placeholder="kvk nr"/>
             <p th:if="${#fields.hasErrors('chamberOfCommerceId')}" th:errors="*{chamberOfCommerceId}">KvK-nummer
                 ongeldig.
             </p>

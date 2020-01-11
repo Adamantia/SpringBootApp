@@ -19,7 +19,6 @@ public class RetailUserService {
 
     public List<RetailUser> findByUserName(String userName) {
         return retailUserRepository.findByUserName(userName);
-
     }
 
     public void newRetailUser(RetailUser retailUser){
@@ -29,7 +28,6 @@ public class RetailUserService {
         bankAccountService.newBankAccount(bankAccount);
         retailUser.setRole("Retail");
         retailUserRepository.save(retailUser);
-        System.out.println(retailUser.getAddress().getCity());
     }
 
 

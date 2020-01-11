@@ -3,6 +3,9 @@ package bankingApp.SpringBoot.model;
 import bankingApp.SpringBoot.model.constraints.kvkNumberDoesNotExistConstraint;
 import bankingApp.SpringBoot.model.enums.CompanyLegalEntity;
 import bankingApp.SpringBoot.model.enums.CompanySector;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
@@ -10,6 +13,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
 public class Company {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -41,11 +47,8 @@ public class Company {
     @ManyToMany(cascade = CascadeType.ALL)
     private List<BankAccount> companyAccounts = new ArrayList<>();
     @ManyToOne(cascade = CascadeType.PERSIST)
-    private BankUser accountManager =  new BankUser();
+    private BankUser accountManager;
 
-    public Company() {
-        super();
-    }
 
     public Company(int chamberOfCommerceId,
                    @NotEmpty String companyName, CompanyLegalEntity legalEntity, CompanySector sector,
@@ -80,93 +83,6 @@ public class Company {
         this.email = email;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public Address getAddres() {
-        return address;
-    }
-
-    public void setAddres(Address address) {
-        this.address = address;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public int getCompanyId() {
-        return companyId;
-    }
-
-    public void setCompanyId(int companyId) {
-        this.companyId = companyId;
-    }
-
-    public int getChamberOfCommerceId() {
-        return chamberOfCommerceId;
-    }
-
-    public void setChamberOfCommerceId(int chamberOfCommerceId) {
-        this.chamberOfCommerceId = chamberOfCommerceId;
-    }
-
-    public String getCompanyName() {
-        return companyName;
-    }
-
-    public void setCompanyName(String companyName) {
-        this.companyName = companyName;
-    }
-
-    public CompanySector getSector() {
-        return sector;
-    }
-
-    public void setSector(CompanySector sector) {
-        this.sector = sector;
-    }
-
-    public int getPinCode() {
-        return pinCode;
-    }
-
-    public void setPinCode(int pinCode) {
-        this.pinCode = pinCode;
-    }
-
-    public boolean isHasPin() {
-        return hasPin;
-    }
-
-    public void setHasPin(boolean hasPin) {
-        this.hasPin = hasPin;
-    }
-
-    public List<SmeUser> getEmployees() {
-        return employees;
-    }
-
-    public void setEmployees(List<SmeUser> employees) {
-        this.employees = employees;
-    }
-
-    public List<BankAccount> getCompanyAccounts() {
-        return companyAccounts;
-    }
-
-    public void setCompanyAccounts(List<BankAccount> companyAccounts) {
-        this.companyAccounts = companyAccounts;
-    }
 
     public void addCompanyEmployee(SmeUser smeUser){
         employees.add(smeUser);
@@ -176,27 +92,4 @@ public class Company {
         companyAccounts.add(bankAccount);
     }
 
-    public CompanyLegalEntity getLegalEntity() {
-        return legalEntity;
-    }
-
-    public void setLegalEntity(CompanyLegalEntity legalEntity) {
-        this.legalEntity = legalEntity;
-    }
-
-    public BankUser getAccountManager() {
-        return accountManager;
-    }
-
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
-    }
-
-    public void setAccountManager(BankUser accountManager) {
-        this.accountManager = accountManager;
-    }
 }

@@ -33,10 +33,8 @@ public class AddEmployeeService {
             feedback = "Couch klant niet beschikbaar";
         } else if (retailUserDao.findByBsn(bsn) != null) {
             RetailUser retailsUser = retailUserDao.findByBsn(bsn);
-            SmeUser newEmployee = new SmeUser(retailsUser.getUserName() + "Z",
-                    "1234", role, bsn, retailsUser.getFirstName(), retailsUser.getMiddleName(),
+            SmeUser newEmployee = new SmeUser(retailsUser.getUserName(), retailsUser.getUserPassword(), role, company,bsn, retailsUser.getFirstName(), retailsUser.getMiddleName(),
                     retailsUser.getLastName());
-            newEmployee.setCompany(company);
             smeUserDao.save(newEmployee);
             companyDao.save(company);
             feedback = "Succes! Medewerker toegevoegd";

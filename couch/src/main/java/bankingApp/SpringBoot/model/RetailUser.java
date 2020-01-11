@@ -2,6 +2,9 @@ package bankingApp.SpringBoot.model;
 
 
 import bankingApp.SpringBoot.model.constraints.bsnDoesNotExistConstraint;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
@@ -10,8 +13,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
 public class RetailUser extends User {
-
 
     @bsnDoesNotExistConstraint
     @NotNull
@@ -38,125 +43,6 @@ public class RetailUser extends User {
     @ManyToMany(cascade = CascadeType.ALL)
     private List<BankAccount> bankAccounts = new ArrayList<BankAccount>();
 
-
-
-    public RetailUser() {
-        this("","");
-        }
-
-    public RetailUser(String userName, String userPassword) {
-        super(userName, userPassword);
-        this.bankAccounts = new ArrayList<>();
-    }
-
-    public RetailUser(String userName, String userPassword, int bsn, String firstName,
-                      String middleName, String lastName,
-                     Address address, String phoneNumber,
-                      String dateOfBirth, String email, String role) {
-        super(userName, userPassword);
-        this.bsn = bsn;
-        this.firstName = firstName;
-        this.middleName = middleName;
-        this.lastName = lastName;
-        this.address = address;
-        this.phoneNumber = phoneNumber;
-        this.dateOfBirth = dateOfBirth;
-        this.email = email;
-        this.role = role;
-
-    }
-
-
-    public RetailUser(String userName, String userPassword, int bsn, String firstName, String middleName,
-                      String lastName, Address address, String phoneNumber, String dateOfBirth, String email, String role, List<BankAccount> bankAccounts) {
-        super(userName, userPassword);
-        this.bsn = bsn;
-        this.firstName = firstName;
-        this.middleName = middleName;
-        this.lastName = lastName;
-        this.address = address;
-        this.phoneNumber = phoneNumber;
-        this.dateOfBirth = dateOfBirth;
-        this.email = email;
-        this.role = role;
-        this.bankAccounts = bankAccounts;
-    }
-
-    public int getBsn() { return bsn;
-    }
-
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
-    }
-
-    public void setBsn(int bsn) {
-        this.bsn = bsn;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getMiddleName() {
-        return middleName;
-    }
-
-    public void setMiddleName(String middleName) {
-        this.middleName = middleName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public String getDateOfBirth() {
-        return dateOfBirth;
-    }
-
-    public void setDateOfBirth(String dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getRole() {
-        return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
-    }
-
-    public List<BankAccount> getBankAccounts() { return bankAccounts; }
-
-    public void setBankAccounts(List<BankAccount> bankAccounts) { this.bankAccounts = bankAccounts; }
 
     public void addBankAccount(BankAccount bankAccount){
       bankAccounts.add(bankAccount);
