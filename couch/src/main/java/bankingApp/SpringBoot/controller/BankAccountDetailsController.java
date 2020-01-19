@@ -20,7 +20,8 @@ public class BankAccountDetailsController {
 
 
     @GetMapping(value = "/bankAccountDetails")
-    public String bankAccountDetailsHandler(@RequestParam("id") long bankAccountId, Model model, HttpServletRequest request) {
+    public String bankAccountDetailsHandler(@RequestParam("id") long bankAccountId, Model model,
+                                            HttpServletRequest request) {
         // log in session
         HttpSession session = request.getSession(true);
         BankAccount clickedBankAccount = bankAccountService.findByBankAccountId(bankAccountId);

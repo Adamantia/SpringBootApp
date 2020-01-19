@@ -29,7 +29,8 @@ public class TransactionController implements WebMvcConfigurer {
 
 
     @RequestMapping(value = "transactionRequest")
-    public String pageHandlerGet(@ModelAttribute User user, Model model, Transaction transaction, HttpServletRequest request) {
+    public String pageHandlerGet(@ModelAttribute User user, Model model, Transaction transaction,
+                                 HttpServletRequest request) {
         HttpSession session = request.getSession (true);
         BankAccount clickedAccount = (BankAccount)session.getAttribute("clickedBankAccount");
         transaction.setBankAccount(clickedAccount);

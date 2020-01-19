@@ -3,14 +3,17 @@ package bankingApp.SpringBoot.service;
 
 import bankingApp.SpringBoot.model.*;
 import bankingApp.SpringBoot.model.dao.*;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 import java.util.*;
 
 
-@Service
-public class HibernateLab {
+//@Service
+@Component
+@Slf4j
+public class HibernateLab implements CommandLineRunner {
 
 
     @Autowired
@@ -35,11 +38,13 @@ public class HibernateLab {
     CompanyRepository companyDao;
 
 
-    public HibernateLab() {
+    public HibernateLab()  {
         super();
     }
 
     public void dbinit() {
+        System.out.println("ok ...");
+
 
         // to ensure no data duplication
 //        // user info for checking if DB is empty
@@ -142,5 +147,11 @@ public class HibernateLab {
         }
 
 //    }
+    }
+
+    @Override
+    public void run(String... args) throws Exception {
+        log.info("database filled in");
+
     }
 }

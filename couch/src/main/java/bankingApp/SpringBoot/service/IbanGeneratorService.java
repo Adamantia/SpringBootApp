@@ -4,27 +4,28 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigInteger;
 
+/** IBAN rules: https://nl.wikipedia.org/wiki/International_Bank_Account_Number
+ *
+ * e.g.  NL10 CCH0 1234 567 90
+ */
+
 @Service
 public class IbanGeneratorService {
 
-    /*
-    IBAN rules: https://nl.wikipedia.org/wiki/International_Bank_Account_Number
-    If an account number starts with a 1 it's an internal account, if it starts with a 0 its a customer (SME or Retail) account
-    The other starting numbers are never used
-*/
 
-    private long generateAccount() {
+    private long generatePrefixAccount() {
+        //generate first part of the account 0
         final long MAX_ACC_NR = 999999999L;
         final long MIN_ACC_NR = 0L;
-        return (long) ((MAX_ACC_NR - MIN_ACC_NR + 1) * Math.random()) + MIN_ACC_NR;       //generate 9 digit acc nr; first digit is always 0
+        return (long) ((MAX_ACC_NR - MIN_ACC_NR + 1) * Math.random()) + MIN_ACC_NR;
     }
 
     private int generateCheckDigits(long account) {
-        account *= 1000000L;                               //add 'NL' numerical and 00 to end of acc nr according to IBAN rules
+        account *= 1000000L;
         account += 232100L;
         BigInteger bigaccount;                              //convert to BigInteger because long is too short
         bigaccount = BigInteger.valueOf(account);
-        bigaccount = bigaccount.add(new BigInteger("122430120000000000000000"));     //add 'CCH' numerical according to IBAN rules
+        bigaccount = bigaccount.add(new BigInteger("122430120000000000000000"));
         return (new BigInteger("98").subtract(bigaccount.mod(new BigInteger("97")))).intValue();        //calculate & return check digits
     }
 
@@ -39,10 +40,10 @@ public class IbanGeneratorService {
 
 
     public String generateIban() {
-        long account = generateAccount();                                 //when database is up, check if IBAN already
+        long account = generatePrefixAccount();                                 //when database is up, check if IBAN already
         int checkDigits = generateCheckDigits(account);
         StringBuilder iban = new StringBuilder();
-        iban.append("NL");
+        iban.append("NL");   //add 'NL' numerical and 00 to end of acc nr according to IBAN rules
         if (checkDigits < 10) {                                              //if checkdigits < 10, add a 0 in front
             String checkDigitsString = Integer.toString(checkDigits);
             checkDigitsString = "0" + checkDigitsString;
@@ -50,7 +51,7 @@ public class IbanGeneratorService {
         } else {
             iban.append(checkDigits);
         }
-        iban.append("CCH");
+        iban.append("CCH");  //add 'CCH' numerical according to IBAN rules
         iban.append(generateAccountAs10digitString(account));
         return iban.toString();
     }

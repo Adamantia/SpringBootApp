@@ -11,7 +11,7 @@
     <form id="company" action="#" th:action="@{couch-zakelijk}" th:object="${company}" method="post">
         <div class="form-group">
             <label for="legalEntity">Legal Entity of Company</label>
-            <select id="legalEntity" th:field="*{legalEntity}" required class="form-control" >
+            <select id="legalEntity" th:field="*{legalEntity}" required class="form-control">
                 <option value="">--</option>
                 <option th:each="legalEntity : ${T(bankingApp.SpringBoot.model.enums.CompanyLegalEntity).values()}"
                         th:value="${legalEntity}"

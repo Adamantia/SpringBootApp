@@ -37,7 +37,8 @@ public class NewCompanyEmployeeController {
 
     // request for a new employee
     @PostMapping(value = "newEmployeeRequest")
-    public String newEmployeeRequestHandler(@RequestParam("newbsn") int newbsn, @RequestParam("newrole") String newrole, Model model, HttpServletRequest request) {
+    public String newEmployeeRequestHandler(@RequestParam("newbsn") int newbsn, @RequestParam("newrole") String newrole,
+                                            Model model, HttpServletRequest request) {
         HttpSession session = request.getSession(true);
         String userName = (String) session.getAttribute("userName");
         int kvkNr = (int) session.getAttribute("companyKvK");
