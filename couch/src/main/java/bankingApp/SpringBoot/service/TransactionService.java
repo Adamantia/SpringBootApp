@@ -38,7 +38,6 @@ public class TransactionService {
         }
         double oldBalance = bankAccountFrom.getBalance();
         double newBalance = bankAccountFrom.getBalance() - transaction.getAmount();
-        System.out.println(newBalance);
         if (newBalance < 0) {
             return "Transaction failed. Your balance is too low.";
         } else {

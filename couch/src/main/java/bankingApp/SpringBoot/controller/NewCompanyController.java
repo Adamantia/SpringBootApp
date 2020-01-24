@@ -5,8 +5,6 @@ import bankingApp.SpringBoot.model.Company;
 import bankingApp.SpringBoot.model.SmeUser;
 import bankingApp.SpringBoot.service.BankAccountService;
 import bankingApp.SpringBoot.service.CompanyService;
-import bankingApp.SpringBoot.service.SmeUserCompanyValidator;
-import bankingApp.SpringBoot.service.SmeUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

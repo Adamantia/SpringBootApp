@@ -1,4 +1,4 @@
-package bankingApp.SpringBoot.service;
+package bankingApp.SpringBoot.util;
 
 import bankingApp.SpringBoot.model.User;
 import bankingApp.SpringBoot.model.dao.UserRepository;

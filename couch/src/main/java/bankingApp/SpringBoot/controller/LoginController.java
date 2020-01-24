@@ -1,7 +1,10 @@
 package bankingApp.SpringBoot.controller;
 
+import bankingApp.SpringBoot.HibernateLab;
 import bankingApp.SpringBoot.model.*;
 import bankingApp.SpringBoot.service.*;
+import bankingApp.SpringBoot.util.PasswordValidator;
+import bankingApp.SpringBoot.util.TypeOfUserValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,9 +31,6 @@ public class LoginController {
     RetailUserService retailUserService;
 
     User user = new User();
-    RetailUser retailUser = new RetailUser();
-    SmeUser smeUser = new SmeUser();
-    BankUser bankUser = new BankUser();
 
 
     @RequestMapping({"", "/", "/index"})

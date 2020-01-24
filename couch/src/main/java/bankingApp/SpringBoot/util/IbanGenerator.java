@@ -1,4 +1,4 @@
-package bankingApp.SpringBoot.service;
+package bankingApp.SpringBoot.util;
 
 import org.springframework.stereotype.Service;
 
@@ -10,14 +10,14 @@ import java.math.BigInteger;
  */
 
 @Service
-public class IbanGeneratorService {
+public class IbanGenerator {
 
 
     private long generatePrefixAccount() {
         //generate first part of the account 0
-        final long MAX_ACC_NR = 999999999L;
-        final long MIN_ACC_NR = 0L;
-        return (long) ((MAX_ACC_NR - MIN_ACC_NR + 1) * Math.random()) + MIN_ACC_NR;
+        final long MAX = 999999999L; // 999999999
+        final long MIN = 0L;
+        return (long) ((MAX - MIN + 1) * Math.random()) + MIN;
     }
 
     private int generateCheckDigits(long account) {
@@ -51,7 +51,7 @@ public class IbanGeneratorService {
         } else {
             iban.append(checkDigits);
         }
-        iban.append("CCH");  //add 'CCH' numerical according to IBAN rules
+        iban.append("CCH");
         iban.append(generateAccountAs10digitString(account));
         return iban.toString();
     }

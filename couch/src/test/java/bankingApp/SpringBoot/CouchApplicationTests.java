@@ -1,4 +1,4 @@
-package bankingApp.SpringBoot.couch.couch;
+package bankingApp.SpringBoot;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,4 +1,4 @@
-package bankingApp.SpringBoot.service;
+package bankingApp.SpringBoot;
 
 
 import bankingApp.SpringBoot.model.*;
@@ -10,7 +10,6 @@ import org.springframework.stereotype.Component;
 import java.util.*;
 
 
-//@Service
 @Component
 @Slf4j
 public class HibernateLab implements CommandLineRunner {

@@ -47,6 +47,7 @@ public class NewCompanyEmployeeController {
         String feedback = addEmployeeService.addEmployee(newbsn, currentCompany, newrole);
         companyService.newCompany(currentCompany);
         List<BankAccount> bankAccountsList = currentCompany.getCompanyAccounts();
+        // TODO refactor model attribute
         model.addAttribute("company", loggedInUser.getCompany());
         model.addAttribute("smeUser", loggedInUser);
         model.addAttribute("userName", loggedInUser.getRoleEmployee());
