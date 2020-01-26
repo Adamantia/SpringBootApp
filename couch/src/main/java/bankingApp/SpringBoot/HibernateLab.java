@@ -3,6 +3,7 @@ package bankingApp.SpringBoot;
 
 import bankingApp.SpringBoot.model.*;
 import bankingApp.SpringBoot.model.dao.*;
+import bankingApp.SpringBoot.util.IbanGenerator;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -17,6 +18,9 @@ public class HibernateLab implements CommandLineRunner {
 
     @Autowired
     UserRepository userDao;
+
+    @Autowired
+    IbanGenerator ibanGenerator;
 
     @Autowired
     RetailUserRepository retailUserDao;
@@ -50,51 +54,54 @@ public class HibernateLab implements CommandLineRunner {
         if (userDao.findByUserPassword("1").size() == 0) {
             User johnDoe = new User("John Doe", "1");
             userDao.save(johnDoe);
+
+            String iban1 = ibanGenerator.generateIban();
+            String iban2 = ibanGenerator.generateIban();
 //
 //            // Creating Bank account data
-//            BankAccount account1 = new BankAccount("NL10CCH0123456790", 80.00, "Prive");
-//            BankAccount account2 = new BankAccount("NL10CCH0223456791", 10.00, "Prive");
-//            BankAccount account3 = new BankAccount("NL10CCH0323456792", 50.00, "Prive");
-//            BankAccount account4 = new BankAccount("NL10CCH0423456793", 80.00, "Prive");
-//            BankAccount account5 = new BankAccount("NL10CCH0523456794", 100.00, "Prive");
-//            BankAccount account6 = new BankAccount("NL10CCH0523456795", 13000, "Prive");
-//
-//            Address address = new Address("Kalverstraat", 25, "B", "1011AB", "Amsterdam", "NL");
+            BankAccount account1 = new BankAccount(iban1, 80.00, "Prive");
+            BankAccount account2 = new BankAccount("NL10CCH0223456791", 10.00, "Prive");
+            BankAccount account3 = new BankAccount("NL10CCH0323456792", 50.00, "Prive");
+            BankAccount account4 = new BankAccount("NL10CCH0423456793", 80.00, "Prive");
+            BankAccount account5 = new BankAccount("NL10CCH0523456794", 100.00, "Prive");
+            BankAccount account6 = new BankAccount("NL10CCH0523456795", 13000, "Prive");
+
+            Address address = new Address("Kalverstraat", 25, "B", "1011AB", "Amsterdam", "NL");
 //
 //            // Creating Retail user data
-//            RetailUser bart = new RetailUser("Bart", "1234", 987654975, "Bart",
-//                    "", "Simpson", address, "690000000", "10-10-1900", "bart@hva.nl", "Retail");
-//            RetailUser charlotte = new RetailUser("Charlotte", "1234", 987654322,
-//                    "Charlotte", "de", "Witte", address, "690000001", "10-10-1999", "cdv@gmail.com", "Retail");
-//            RetailUser karin = new RetailUser("Karin", "1234", 987654325,
-//                    "Karin", "van", "Dijk", address, "690000801", "10-10-1990", "kvd@gmail.com", "Retail");
-//            RetailUser jan = new RetailUser("Jan", "1234", 987654326,
-//                    "Jan", "", "Bakken", address, "6901230801", "10-10-1989", "jbakker@gmail.com", "Retail");
-//            RetailUser felix = new RetailUser("Felix", "1234", 987654321, "Boudewijn",
-//                    "", "Simpson", address, "690000000", "10-10-1900", "bart@hva.nl", "Retail");
+            RetailUser bart = new RetailUser("Bart", "1234", 987654975, "Bart",
+                    "", "Simpson", address, "690000000", "10-10-1900", "bart@hva.nl", "Retail");
+            RetailUser charlotte = new RetailUser("Charlotte", "1234", 987654322,
+                    "Charlotte", "de", "Witte", address, "690000001", "10-10-1999", "cdv@gmail.com", "Retail");
+            RetailUser karin = new RetailUser("Karin", "1234", 987654325,
+                    "Karin", "van", "Dijk", address, "690000801", "10-10-1990", "kvd@gmail.com", "Retail");
+            RetailUser jan = new RetailUser("Jan", "1234", 987654326,
+                    "Jan", "", "Bakken", address, "6901230801", "10-10-1989", "jbakker@gmail.com", "Retail");
+            RetailUser felix = new RetailUser("Felix", "1234", 987654321, "Boudewijn",
+                    "", "Simpson", address, "690000000", "10-10-1900", "bart@hva.nl", "Retail");
 //
 //            // confirmation that DB is running
 //            System.out.println("Creating schema");
-//            charlotte.addBankAccount(account2);
-//            bart.addBankAccount(account1);
-//            jan.addBankAccount(account5);
-//            felix.addBankAccount(account6);
-//
-//            bankAccountDao.save(account1);
-//            bankAccountDao.save(account2);
-//            bankAccountDao.save(account3);
-//            bankAccountDao.save(account4);
-//            bankAccountDao.save(account5);
-//            bankAccountDao.save(account6);
+            charlotte.addBankAccount(account2);
+            bart.addBankAccount(account1);
+            jan.addBankAccount(account5);
+            felix.addBankAccount(account6);
+
+            bankAccountDao.save(account1);
+            bankAccountDao.save(account2);
+            bankAccountDao.save(account3);
+            bankAccountDao.save(account4);
+            bankAccountDao.save(account5);
+            bankAccountDao.save(account6);
 //
 //
 //
 //            // saving to the db
-//            retailUserDao.save(bart);
-//            retailUserDao.save(karin);
-//            retailUserDao.save(charlotte);
-//            retailUserDao.save(jan);
-//            retailUserDao.save(felix);
+            retailUserDao.save(bart);
+            retailUserDao.save(karin);
+            retailUserDao.save(charlotte);
+            retailUserDao.save(jan);
+            retailUserDao.save(felix);
 //
 //            //  ----  Data for Company & employees ----
 //            BankAccount accountTest = new BankAccount("NL10COUC0523455661", 150000);

@@ -24,9 +24,6 @@ public class BankAccount {
     @Column(name ="iban")
     private String iban;
     private double balance;
-    @Pattern(regexp="^(0|[1-9][0-9]*)$")
-    @Size(min=5, max=5)
-    private String koppelcode;
     @OneToMany(mappedBy = "bankAccount")
     private List<Transaction> transactions;
     @OneToMany(mappedBy = "bankAccountTo")
@@ -36,6 +33,12 @@ public class BankAccount {
     @ManyToMany(mappedBy = "companyAccounts")
     private List<Company> companies = new ArrayList<>();
     private String accountType;
+
+    public BankAccount(String iban, double balance, String accountType) {
+        this.iban = iban;
+        this.balance = balance;
+        this.accountType = accountType;
+    }
 
     public String twoDecimalBalance(double balance){ return String.format("%.2f", balance); }
 

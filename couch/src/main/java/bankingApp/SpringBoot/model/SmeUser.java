@@ -28,9 +28,9 @@ public class SmeUser extends User {
     private String lastName;
 
 
-    public SmeUser(String userName, String Password, String roleEmployee, Company company, int bsn, String firstName,
+    public SmeUser(String userName, String password, String roleEmployee, Company company, int bsn, String firstName,
                    String middleName, String lastName) {
-        super();
+        super(userName, password);
         this.roleEmployee = roleEmployee;
         this.company = company;
         this.bsn = bsn;

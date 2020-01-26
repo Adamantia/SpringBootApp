@@ -60,7 +60,6 @@ public class PersonalPageController<retailUser> {
             newBankAccount.setAccountType("Retail");
             retailUser.addBankAccount(newBankAccount);
             bankAccountService.newBankAccount(newBankAccount);
-            //retailUserService.newRetailUser(retailUser);
             List<BankAccount> bankAccountsList = retailUser.getBankAccounts();
             model.addAttribute("userName", userName);
             model.addAttribute("retailUserFullName", retailUser.getFullName());

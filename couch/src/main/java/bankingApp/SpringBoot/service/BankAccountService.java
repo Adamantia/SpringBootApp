@@ -15,6 +15,8 @@ public class BankAccountService {
     @Autowired
     IbanGenerator ibanGenerator;
 
+    private final double INITIAL_BALANCE = 5.00;
+
 
     public BankAccount findByBankAccountId(long bankAccount) {
         return bankAccountRepository.findByBankAccountId(bankAccount);
@@ -28,17 +30,19 @@ public class BankAccountService {
     public BankAccount newBankAccount(BankAccount bankAccount){
         if (bankAccount.getIban() == null) {
             setIban(bankAccount);
+            //give initial balance
+            bankAccount.setBalance(INITIAL_BALANCE);
+            bankAccountRepository.save(bankAccount);
         }
-        bankAccountRepository.save(bankAccount);
         return bankAccount;
     }
 
     public void setIban(BankAccount bankAccount) {
-        bankAccount.setIban(ibanGenerator.generateIban());
-        if (findByIban(bankAccount.getIban()) != null) {
-            bankAccount.setIban(ibanGenerator.generateIban());
+        String iban = ibanGenerator.generateIban();
+        if (findByIban(iban) != null) {
+            iban = ibanGenerator.generateIban();
+            // TODO add while loop
         }
+        bankAccount.setIban(iban);
     }
-
-
 }

@@ -43,6 +43,20 @@ public class RetailUser extends User {
     @ManyToMany(cascade = CascadeType.ALL)
     private List<BankAccount> bankAccounts = new ArrayList<BankAccount>();
 
+    public RetailUser(String userName, String userPassword, int bsn, String firstName, String middleName,
+                      String lastName, Address address, String phoneNumber, String dateOfBirth, String email, String role) {
+        super(userName, userPassword);
+        this.bsn = bsn;
+        this.firstName = firstName;
+        this.middleName = middleName;
+        this.lastName = lastName;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
+        this.dateOfBirth = dateOfBirth;
+        this.email = email;
+        this.role = role;
+        this.bankAccounts = bankAccounts;
+    }
 
     public void addBankAccount(BankAccount bankAccount){
       bankAccounts.add(bankAccount);
