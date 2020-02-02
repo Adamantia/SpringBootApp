@@ -10,7 +10,7 @@
         </button>
         <div class="dropdown-menu">
             <h6 class="dropdown-header">Options</h6>
-            <a class="dropdown-item" th:href="@{transactionRequest(id=${iban})}">Make a transaction</a>
+            <a class="dropdown-item" th:href="@{transactionRequest(id=${bankAccount.bankAccountId})}">Make a transaction</a>
             <a class="dropdown-item" href="/overview">Personal Page</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="/logout">Logout</a>
@@ -41,14 +41,21 @@
         </tr>
         <tr th:each="transaction: ${allTransactions}">
             <td th:text="${transaction.transactionDate}"></td>
-            <td th:text="${transaction.bankAccount.IBAN == iban} ? ${transaction.bankAccountTo} : ${transaction.bankAccount}"></td>
+            <td th:text="${transaction.bankAccount.iban == iban} ? ${transaction.bankAccountTo} : ${transaction.bankAccount}"></td>
             <td th:text="${transaction.description}"></td>
-            <td th:text="${transaction.bankAccount.IBAN == iban} ? 'From': 'To'"></td>
+            <td th:text="${transaction.bankAccount.iban == iban} ? 'From': 'To'"></td>
             <td><span th:text="${#numbers.formatDecimal(transaction.amount, 1, 2)}"/></td>
         </tr>
     </table>
 
 </div>
+<td th:if="${bankAccountType=='Private'}">
+    Go <a href="/overview">back</a> to your personal page.
+</td>
+<td th:if="${bankAccountType=='Retail'}">
+    Go <a href="/company_overview">back</a> to your company page.
+</td>
+<br>
 <div th:insert="/fragments/footer :: footer"></div>
 </body>
 </html>

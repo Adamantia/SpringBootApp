@@ -10,12 +10,8 @@ import java.util.List;
 
 public interface RetailUserRepository extends CrudRepository<RetailUser, Integer> {
 
-    public List<RetailUser> findAllByBsn(int bsn);
-
     public RetailUser findByBsn(int bsn);
 
-    public List<RetailUser> findByUserName(String userName);
-
-    public RetailUser findRetailUserByBankAccounts(BankAccount bankAccount);
+    public RetailUser findByUserName(String userName);
 
 }

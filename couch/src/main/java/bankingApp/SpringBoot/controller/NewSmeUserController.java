@@ -54,9 +54,7 @@ public class NewSmeUserController {
         } else {
             //check is user already has a company
             if (validator.userOwnsAnotherCompany(smeUser.getBsn())) {
-                return "account_overflow";
-            }
-//            newCompany.addCompanyEmployee(smeUser);
+                return "account_overflow"; }
             smeUser.setCompany(newCompany);
             smeUserService.newSmeUser(smeUser);
             return "new_smeUser_success";

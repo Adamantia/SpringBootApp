@@ -50,7 +50,7 @@ public class NewCompanyController implements WebMvcConfigurer {
             BankAccount bankAccount = new BankAccount();
             bankAccount.setAccountType("Zakelijk");
             bankAccountService.newBankAccount(bankAccount);
-//            company.setEmployees(employees);
+            // company.setEmployees(employees);
             companyService.newCompany(company);
             // saving company in session
             session.setAttribute("company", company);

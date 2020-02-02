@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns:th="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/xhtml">
 <head th:insert="/fragments/header :: header"></head>
 <body>
 <div th:insert="/fragments/navbar :: nav"></div>
@@ -23,7 +23,7 @@
 
     <div th:unless="${#lists.isEmpty(allBankAccounts)}">
         <table class="table" title="Overzicht">
-            <thead title="Rekeningen">
+            <thead title="Bank Accounts">
             <tr>
                 <th>Bank Account(IBAN)</th>
                 <th>Balance</th>
@@ -34,12 +34,11 @@
             <tbody>
             <tr th:each="bankAccount: ${allBankAccounts}">
                 <td><a th:href="@{companyAccountDetails(id=${bankAccount.bankAccountId})}"
-                       th:text="${bankAccount.iBAN}"></a></td>
+                       th:text="${bankAccount.iban}"></a></td>
                 <td><span th:text="${#numbers.formatDecimal(bankAccount.balance, 1, 2)}"></span></td>
                 <td><a class="btn btn-info" role="button"
                        th:href="@{companyAccountDetails(id=${bankAccount.bankAccountId})}">Account Details</a></td>
-                <td><a th:href="@{transactionRequest(id=${bankAccount.bankAccountId})}"
-                       class="btn btn-info" role="button"> Make a transaction</a></td>
+                <td><a th:href="@{transactionRequest(id=${bankAccount.bankAccountId})}" class="btn btn-info" role="button"> Make a transaction</a></td>
             </tr>
             </tbody>
         </table>

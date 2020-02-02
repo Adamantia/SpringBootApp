@@ -33,7 +33,7 @@ public class TypeOfUserValidator {
 
 
     public boolean validateRetailUser(User formUser) {
-        List<RetailUser> users = retailUserDao.findByUserName(formUser.getUserName());
-        return (users != null && users.size() >= 1);
+        RetailUser user = retailUserDao.findByUserName(formUser.getUserName());
+        return (user != null);
     }
 }

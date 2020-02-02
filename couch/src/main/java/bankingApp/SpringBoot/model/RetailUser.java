@@ -55,7 +55,6 @@ public class RetailUser extends User {
         this.dateOfBirth = dateOfBirth;
         this.email = email;
         this.role = role;
-        this.bankAccounts = bankAccounts;
     }
 
     public void addBankAccount(BankAccount bankAccount){
@@ -68,7 +67,7 @@ public class RetailUser extends User {
 
 @Override
     public String toString(){
-        return "first name" +firstName + " last name" + lastName +"bsn " + bsn;
+        return "first name" + firstName + " last name" + lastName +"bsn " + bsn;
     }
 
 }

@@ -1,5 +1,4 @@
 package bankingApp.SpringBoot.controller;
-
 import bankingApp.SpringBoot.model.*;
 import bankingApp.SpringBoot.model.dao.SmeUserRepository;
 import bankingApp.SpringBoot.service.*;
@@ -41,9 +40,10 @@ public class CompanyPageController {
     private String[] roles = {"CEO", "Medewerker", "Admin"};
 
 
-    // zakelijk klant login & validation
-    @PostMapping(value = "zakelijk-klant")
-    public String smeLoginHandler(@ModelAttribute User user, Model model, HttpServletRequest request) {
+    // company login & validation
+    @PostMapping(value = "company_overview")
+    public String smeLoginHandler(@ModelAttribute User user, Model model,
+                                  HttpServletRequest request) {
         // validate user is an SME User
         if (!validator2.validateSMEUser(user) || !validator.validateMemberPassword(user)) {
             String message = "Invalid username and/or password. Please try again";
@@ -57,8 +57,9 @@ public class CompanyPageController {
         Company company = loggedInUser.getCompany();
         HttpSession session = request.getSession(true);
         String companyData = company.getCompanyName() + " kvkNr: " + company.getChamberOfCommerceId() +
-                " gebruiker  : " + loggedInUser.getFirstName() + " " + loggedInUser.getLastName();
+                " user  : " + loggedInUser.getFirstName() + " " + loggedInUser.getLastName();
         session.setAttribute("companyKvK", loggedInUser.getCompany().getChamberOfCommerceId());
+        session.setAttribute("user", loggedInUser);
         session.setAttribute("userName", loggedInUser.getUserName());
         session.setAttribute("fullNames", companyData);
         model.addAttribute("smeUser", loggedInUser);
@@ -71,11 +72,11 @@ public class CompanyPageController {
         model.addAttribute("newbsn", 0);
         model.addAttribute("newrole", "");
         model.addAttribute("roles", roles);
-        return "sme_page";
+        return "company_page";
     }
 
     // user goes back to page
-    @GetMapping(value = "zakelijk")
+    @GetMapping(value = "company_overview")
     public String smeHandler(@ModelAttribute User user, Model model, HttpServletRequest request) {
         HttpSession session = request.getSession(true);
         int kvkNr = (int) session.getAttribute("companyKvK");
@@ -91,7 +92,7 @@ public class CompanyPageController {
         model.addAttribute("newbsn", 0);
         model.addAttribute("newrole", "");
         model.addAttribute("roles", roles);
-        return "sme_page";
+        return "company_page";
     }
 
     // request for a new company account
@@ -106,7 +107,6 @@ public class CompanyPageController {
         String message = addBankAccountService.addBankAccount(currentCompany);
         model.addAttribute("company", loggedInUser.getCompany());
         model.addAttribute("smeUser", loggedInUser);
-        model.addAttribute("userName", loggedInUser.getRoleEmployee());
         model.addAttribute("role", loggedInUser.getRoleEmployee());
         model.addAttribute("companyName", loggedInUser.getCompany().getCompanyName());
         model.addAttribute("allBankAccounts", currentCompany.getCompanyAccounts());
@@ -115,7 +115,7 @@ public class CompanyPageController {
         model.addAttribute("newrole", "");
         model.addAttribute("roles", roles);
         model.addAttribute("message", message);
-        return "sme_page";
+        return "company_page";
     }
 
     // company details per clicked bank account
@@ -125,6 +125,7 @@ public class CompanyPageController {
         HttpSession session = request.getSession(true);
         BankAccount clickedBankAccount = bankAccountService.findByBankAccountId(bankAccountId);
         session.setAttribute("clickedBankAccount", clickedBankAccount);
+        session.setAttribute("iban", clickedBankAccount.getIban());
         List<Transaction> transactionList = clickedBankAccount.getTransactions();
         List<Transaction> transactionToList = clickedBankAccount.getTransactionsTo();
         transactionList.addAll(transactionToList);

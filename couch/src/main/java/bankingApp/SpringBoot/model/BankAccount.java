@@ -42,6 +42,14 @@ public class BankAccount {
 
     public String twoDecimalBalance(double balance){ return String.format("%.2f", balance); }
 
+    public long getBankAccountId() {
+        return bankAccountId;
+    }
+
+    public String getIban() {
+        return iban;
+    }
+
     @Override
     public String toString() {
         return iban;

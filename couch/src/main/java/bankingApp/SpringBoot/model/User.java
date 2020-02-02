@@ -29,7 +29,7 @@ public class User  {
     private int userId;
     @Column(name = "userName", unique = true)
     @NotEmpty
-    @UsernameDoesNotExistConstraint(message = "Gebruikersnaam is al in gebruik.")
+    @UsernameDoesNotExistConstraint(message = "Username already taken.")
     private String userName;
     @NotEmpty
     private String userPassword;
@@ -37,6 +37,10 @@ public class User  {
     public User(@NotEmpty String userName, @NotEmpty String userPassword) {
         this.userName = userName;
         this.userPassword = userPassword;
+    }
+
+    public String getUserName() {
+        return userName;
     }
 }
 

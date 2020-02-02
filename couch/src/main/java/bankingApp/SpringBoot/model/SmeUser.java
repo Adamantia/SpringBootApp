@@ -1,5 +1,6 @@
 package bankingApp.SpringBoot.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -14,6 +15,7 @@ import javax.validation.constraints.NotNull;
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 public class SmeUser extends User {
 
     private String roleEmployee;
@@ -28,17 +30,30 @@ public class SmeUser extends User {
     private String lastName;
 
 
-    public SmeUser(String userName, String password, String roleEmployee, Company company, int bsn, String firstName,
+    public SmeUser(String userName, String password, String roleEmployee, int bsn, String firstName,
                    String middleName, String lastName) {
         super(userName, password);
         this.roleEmployee = roleEmployee;
-        this.company = company;
         this.bsn = bsn;
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;
     }
 
+    public SmeUser(String userName, String password, String roleEmployee, Company company, int bsn, String firstName,
+                   String middleName, String lastName) {
+        super(userName, password);
+        this.roleEmployee = roleEmployee;
+        this.bsn = bsn;
+        this.firstName = firstName;
+        this.middleName = middleName;
+        this.lastName = lastName;
+        this.company = company;
+    }
+
+    public String getUserName() {
+        return super.getUserName();
+    }
 
     @Override
     public String toString(){

@@ -37,9 +37,7 @@ public class LoginController {
     public String indexHandler(Model model, HttpSession session) {
         // destroy session
         if (session != null) {
-            session.invalidate();
-        }
-        // initiate database
+            session.invalidate(); }
         lab.dbinit();
         model.addAttribute("user", user);
         return "index";
@@ -57,18 +55,14 @@ public class LoginController {
         }
         HttpSession session = request.getSession(true);
         String userName = user.getUserName();
-        List<RetailUser> loggedInRetailUsers = retailUserService.findByUserName(userName);
-        RetailUser loggedInRetailUser = loggedInRetailUsers.get(0);
+        RetailUser loggedInRetailUser = retailUserService.findByUserName(userName);
         List<BankAccount> loggedInBankAccounts = loggedInRetailUser.getBankAccounts();
-        // -- for login session ---
+        session.setAttribute("user", loggedInRetailUser);
         session.setAttribute("userName", userName);
-        session.setAttribute("retailUser", loggedInRetailUser);
-        session.setAttribute("userId", user.getUserId());
-        model.addAttribute("userName", loggedInRetailUser.getUserName());
+        model.addAttribute("userName", userName);
         model.addAttribute("retailUserFullName", loggedInRetailUser.getFullName());
         model.addAttribute("allBankAccounts", loggedInBankAccounts);
         return "personal_page";
-
     }
 
     @GetMapping(value = "retail-login")
@@ -83,4 +77,5 @@ public class LoginController {
     public String newUserHandler() {
         return "new_user_select_type";
     }
+
 }

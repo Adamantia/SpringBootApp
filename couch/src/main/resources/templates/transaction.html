@@ -7,11 +7,11 @@
 <div class="p-3 mb-2 bg-primary text-white"><span th:text="${fullNames}"></span></div>
 <div class="p-3 mb-2 bg-secondary text-white"></div>
 <div class="container">
-    <h2>IBAN <span th:text="${bankAccount.iban}"></span></h2>
-    <h3>Balance <span th:text="${bankAccount.balance}" th:field="*{bankAccount.balance}"> </span> euro </h3>
+    <h2>IBAN <span th:text="${iban}"></span></h2>
+    <h3>Balance <span th:text="${{#numbers.formatDecimal(bankAccount.balance, 1, 2)}}" th:field="*{bankAccount.balance}"> </span> euro </h3>
     <h3>Transaction Details</h3>
 
-    <form action="#" th:action="@{transactionConfirmation}" th:object="${transaction}"
+    <form action="#" th:action="@{transactionConfirmation(id=${bankAccountId})}"  th:object="${transaction}"
           method="post">
         <input type="hidden" th:field="*{bankAccount.iban}"/>
         <table>
@@ -43,11 +43,11 @@
         </div>
     </form>
     <br>
-    <td th:unless="${bankAccountType=='Zakelijk'}">
+    <td th:unless="${bankAccountType=='Private'}">
         Go <a href="/overview">back</a> to your personal page.
     </td>
-    <td th:if="${bankAccountType=='Zakelijk'}">
-        Go <a href='/zakelijk'>back</a> to your company page.
+    <td th:if="${bankAccountType=='Retail'}">
+        Go <a href='/company_overview'>back</a> to your company page.
     </td>
     <br>
 </div>

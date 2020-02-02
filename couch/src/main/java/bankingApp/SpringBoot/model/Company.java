@@ -50,8 +50,8 @@ public class Company {
     private BankUser accountManager;
 
 
-    public Company(int chamberOfCommerceId,
-                   @NotEmpty String companyName, CompanyLegalEntity legalEntity, CompanySector sector,
+    public Company(int chamberOfCommerceId, String companyName,
+                   CompanyLegalEntity legalEntity, CompanySector sector,
                    Address address, String phoneNumber,
                    int pinCode, boolean hasPin, List<SmeUser> employees,
                    List<BankAccount> companyAccounts, BankUser accountManager, String email) {
@@ -71,7 +71,8 @@ public class Company {
         this.email = email;
     }
 
-    public Company(int chamberOfCommerceId, String companyName, CompanyLegalEntity legalEntity, CompanySector sector, Address address,
+    public Company(int chamberOfCommerceId, String companyName, CompanyLegalEntity legalEntity,
+                   CompanySector sector, Address address,
                    String phoneNumber,
                    String email) {
         this.chamberOfCommerceId = chamberOfCommerceId;

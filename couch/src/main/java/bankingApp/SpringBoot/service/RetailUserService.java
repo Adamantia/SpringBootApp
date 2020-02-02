@@ -17,7 +17,7 @@ public class RetailUserService {
     @Autowired
     BankAccountService bankAccountService;
 
-    public List<RetailUser> findByUserName(String userName) {
+    public RetailUser findByUserName(String userName) {
         return retailUserRepository.findByUserName(userName);
     }
 

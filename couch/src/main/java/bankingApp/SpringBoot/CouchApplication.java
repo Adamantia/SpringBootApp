@@ -12,6 +12,5 @@ public class CouchApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(CouchApplication.class, args);
-
     }
 }

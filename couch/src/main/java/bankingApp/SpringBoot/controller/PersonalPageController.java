@@ -29,42 +29,35 @@ public class PersonalPageController<retailUser> {
     @Autowired
     BankAccountService bankAccountService;
 
-    // user returns to personal page
+
     @GetMapping(value = "overview")
-    public String overviewHandler(@ModelAttribute User user, Model model, HttpServletRequest request) {
+    public String getHome(@ModelAttribute User user, Model model, HttpServletRequest request) {
         HttpSession session = request.getSession(true);
         String userName = (String) session.getAttribute("userName");
-        List<RetailUser> retailUsers = retailUserService.findByUserName(userName);
-        RetailUser retailUser;
-        if (retailUsers.size() > 0){
-          retailUser = retailUsers.get(0);
-        }
-        else {
-            retailUser = (RetailUser)session.getAttribute("retailUser");
-        }
+        RetailUser retailUser = retailUserService.findByUserName(userName);
         List<BankAccount> loggedInBankAccounts  = retailUser.getBankAccounts();
         model.addAttribute("userName", userName);
+        model.addAttribute("retailUser", retailUser);
         model.addAttribute("retailUserFullName", retailUser.getFullName());
         model.addAttribute("allBankAccounts", loggedInBankAccounts);
         return "personal_page";
     }
 
     @RequestMapping(value = "newAccountRequest")
-    public String newAccountRequestHandler(@ModelAttribute User user, Model model, HttpServletRequest request) {
-        // log in session
+    public String getNewAccount(@ModelAttribute User user, Model model, HttpServletRequest request) {
         HttpSession session = request.getSession(true);
         String userName = (String) session.getAttribute("userName");
         if (retailUserService.findByUserName(userName) != null) {
-            RetailUser retailUser = retailUserService.findByUserName(userName).get(0);
+            RetailUser retailUser = retailUserService.findByUserName(userName);
             BankAccount newBankAccount = new BankAccount();
             newBankAccount.setAccountType("Retail");
             retailUser.addBankAccount(newBankAccount);
             bankAccountService.newBankAccount(newBankAccount);
+
             List<BankAccount> bankAccountsList = retailUser.getBankAccounts();
             model.addAttribute("userName", userName);
             model.addAttribute("retailUserFullName", retailUser.getFullName());
-            model.addAttribute("allBankAccounts", bankAccountsList);
-        }
+            model.addAttribute("allBankAccounts", bankAccountsList); }
         return "personal_page";
     }
 

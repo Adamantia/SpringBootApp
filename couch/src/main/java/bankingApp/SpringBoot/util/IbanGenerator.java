@@ -11,7 +11,6 @@ import java.util.stream.IntStream;
 
 /**
  * IBAN rules: https://nl.wikipedia.org/wiki/International_Bank_Account_Number
- * <p>
  * e.g.  NL10 CCH0 1234 567 90
  */
 
@@ -32,11 +31,8 @@ public class IbanGenerator {
         iban.append(BANKCODE);
         iban.append("000");
         iban.append(accountNr);
-        System.out.println("iban is "+ iban.toString());
         return iban.toString();
     }
-
-
 
 
     public String generateAccountNr() {
@@ -60,7 +56,6 @@ public class IbanGenerator {
         BigInteger b2 = new BigInteger("97");
         BigInteger b3 = new BigInteger("98");
         BigInteger b4 = b3.subtract(b1.mod(b2));
-        System.out.println("control code is " + b4.toString());
         return b4.toString();
     }
 

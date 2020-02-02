@@ -40,39 +40,4 @@ public class Address {
         this.city = city;
         this.country = country;
     }
-
-    public Address(String streetName, int streetNumber, String extension, String zipcode, String city, String country,
-                   Company company, RetailUser retailUser) {
-        this.streetName = streetName;
-        this.streetNumber = streetNumber;
-        this.extension = extension;
-        this.zipcode = zipcode;
-        this.city = city;
-        this.country = country;
-        this.company = company;
-        this.retailUser = retailUser;
-    }
-
-
-    public Address(String streetName, int streetNumber, String extension,  String zipcode, String city, String country,
-                   Company company) {
-        this.streetName = streetName;
-        this.streetNumber = streetNumber;
-        this.extension = extension;
-        this.zipcode = zipcode;
-        this.city = city;
-        this.country = country;
-        this.company = company;
-    }
-
-    public Address(String streetName, int streetNumber, String extension,  String zipcode, String city, String country, RetailUser retailUser) {
-        this.streetName = streetName;
-        this.streetNumber = streetNumber;
-        this.extension = extension;
-        this.zipcode = zipcode;
-        this.city = city;
-        this.country = country;
-        this.retailUser = retailUser;
-    }
-
 }
