@@ -47,6 +47,7 @@ public class NewCompanyEmployeeController {
         String feedback = addEmployeeService.addEmployee(newbsn, currentCompany, newrole);
         companyService.newCompany(currentCompany);
         List<BankAccount> bankAccountsList = currentCompany.getCompanyAccounts();
+
         // TODO refactor model attribute
         model.addAttribute("company", loggedInUser.getCompany());
         model.addAttribute("smeUser", loggedInUser);
@@ -59,6 +60,7 @@ public class NewCompanyEmployeeController {
         model.addAttribute("newrole", newrole);
         model.addAttribute("feedback", feedback);
         model.addAttribute("roles", roles);
+
         return "sme_page";
     }
 

@@ -40,6 +40,7 @@ public class PersonalPageController<retailUser> {
         model.addAttribute("retailUser", retailUser);
         model.addAttribute("retailUserFullName", retailUser.getFullName());
         model.addAttribute("allBankAccounts", loggedInBankAccounts);
+
         return "personal_page";
     }
 
@@ -47,6 +48,7 @@ public class PersonalPageController<retailUser> {
     public String getNewAccount(@ModelAttribute User user, Model model, HttpServletRequest request) {
         HttpSession session = request.getSession(true);
         String userName = (String) session.getAttribute("userName");
+
         if (retailUserService.findByUserName(userName) != null) {
             RetailUser retailUser = retailUserService.findByUserName(userName);
             BankAccount newBankAccount = new BankAccount();
@@ -57,7 +59,9 @@ public class PersonalPageController<retailUser> {
             List<BankAccount> bankAccountsList = retailUser.getBankAccounts();
             model.addAttribute("userName", userName);
             model.addAttribute("retailUserFullName", retailUser.getFullName());
-            model.addAttribute("allBankAccounts", bankAccountsList); }
+            model.addAttribute("allBankAccounts", bankAccountsList);
+        }
+
         return "personal_page";
     }
 

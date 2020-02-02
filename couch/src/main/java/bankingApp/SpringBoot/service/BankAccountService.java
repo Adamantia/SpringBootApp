@@ -30,10 +30,12 @@ public class BankAccountService {
     public BankAccount newBankAccount(BankAccount bankAccount){
         if (bankAccount.getIban() == null) {
             setIban(bankAccount);
-            //give initial balance
+
+            // give initial balance
             bankAccount.setBalance(INITIAL_BALANCE);
             bankAccountRepository.save(bankAccount);
         }
+
         return bankAccount;
     }
 
@@ -43,6 +45,7 @@ public class BankAccountService {
             iban = ibanGenerator.generateIban();
             // TODO add while loop
         }
+
         bankAccount.setIban(iban);
     }
 }

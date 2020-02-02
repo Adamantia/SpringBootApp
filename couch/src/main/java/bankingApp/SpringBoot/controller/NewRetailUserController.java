@@ -31,10 +31,11 @@ public class NewRetailUserController implements WebMvcConfigurer {
                                     BindingResult bindingResult){
         if(bindingResult.hasErrors()){
             return "new_retailUser";
-        } else {
-            retailUserService.newRetailUser(retailUser);
+        }
+
+        retailUserService.newRetailUser(retailUser);
+
         return "new_retailUser_success";
-    }
    }
 
 }

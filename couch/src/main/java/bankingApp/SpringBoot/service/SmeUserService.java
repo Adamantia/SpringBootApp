@@ -26,6 +26,4 @@ public class SmeUserService {
     public void newSmeUser (@Valid SmeUser smeUser){
         smeUserDao.save(smeUser);
     }
-
-
 }

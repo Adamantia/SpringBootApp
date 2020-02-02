@@ -31,11 +31,13 @@ public class TransactionService {
         if (transaction.getBankAccountTo().getIban().equals(transaction.getBankAccount().getIban())) {
             return "Please enter an account number other than your own";
         }
+
         // check that bank account to exists
         BankAccount bankAccountTo = bankAccountService.findByIban(transaction.getBankAccountTo().getIban());
         if (bankAccountTo == null) {
             return "Transaction failed. Iban not found.";
         }
+
         double oldBalance = bankAccountFrom.getBalance();
         double newBalance = bankAccountFrom.getBalance() - transaction.getAmount();
         if (newBalance < 0) {
@@ -50,11 +52,11 @@ public class TransactionService {
             Transaction transaction1 = new Transaction(transaction.getAmount(), transaction.getTransactionDate(),
                     bankAccountFrom, bankAccountTo, transaction.getDescription());
             transactionDao.save(transaction1);
+
             return "\nThank you!\n<small>Your transaction of " + String.format("%.2f", transaction.getAmount())
                     + " euro was successful. \nYour balance was: " +
                     String.format("%.2f", oldBalance) +
                     "\nYour current balance is " + String.format("%.2f", newBalance) + " euro.</small>";
         }
     }
-
 }

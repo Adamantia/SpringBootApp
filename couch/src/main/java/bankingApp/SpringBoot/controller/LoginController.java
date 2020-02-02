@@ -37,9 +37,12 @@ public class LoginController {
     public String indexHandler(Model model, HttpSession session) {
         // destroy session
         if (session != null) {
-            session.invalidate(); }
+            session.invalidate();
+        }
+
         lab.dbinit();
         model.addAttribute("user", user);
+
         return "index";
     }
 
@@ -53,6 +56,7 @@ public class LoginController {
             model.addAttribute("message", message);
             return "index";
         }
+
         HttpSession session = request.getSession(true);
         String userName = user.getUserName();
         RetailUser loggedInRetailUser = retailUserService.findByUserName(userName);
@@ -62,6 +66,7 @@ public class LoginController {
         model.addAttribute("userName", userName);
         model.addAttribute("retailUserFullName", loggedInRetailUser.getFullName());
         model.addAttribute("allBankAccounts", loggedInBankAccounts);
+
         return "personal_page";
     }
 
@@ -70,6 +75,7 @@ public class LoginController {
         SmeUser smeUser = new SmeUser();
         model.addAttribute("user", user);
         model.addAttribute("smeUser", smeUser);
+
         return "company_login";
     }
 

@@ -4,10 +4,8 @@
             <img th:src="@{/images/couch.png}" alt="logo" height="75"/></a>
         <span class="title-logo">COUCH BANK</span>
         <ul class="navbar-nav">
-            <li class="logout">
-                <td th:if="${userName!=null}">
-                    <a class="nav-link" href='/'>Logout</a>
-                </td>
+            <li class="logout" th:if="${userName!=null}">
+                <a class="nav-link" href='/'>Logout</a>
             </li>
         </ul>
     </nav>

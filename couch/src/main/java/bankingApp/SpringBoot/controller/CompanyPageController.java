@@ -56,12 +56,16 @@ public class CompanyPageController {
         SmeUser loggedInUser = smeUserDao.findByUserName(user.getUserName());
         Company company = loggedInUser.getCompany();
         HttpSession session = request.getSession(true);
-        String companyData = company.getCompanyName() + " kvkNr: " + company.getChamberOfCommerceId() +
-                " user  : " + loggedInUser.getFirstName() + " " + loggedInUser.getLastName();
+        String companyData = company.getCompanyName()
+                + " kvkNr: " + company.getChamberOfCommerceId() +
+                " user  : " + loggedInUser.getFirstName()
+                + " " + loggedInUser.getLastName();
+
         session.setAttribute("companyKvK", loggedInUser.getCompany().getChamberOfCommerceId());
         session.setAttribute("user", loggedInUser);
         session.setAttribute("userName", loggedInUser.getUserName());
         session.setAttribute("fullNames", companyData);
+
         model.addAttribute("smeUser", loggedInUser);
         model.addAttribute("userName", loggedInUser.getUserName());
         model.addAttribute("role", loggedInUser.getRoleEmployee());
@@ -72,6 +76,7 @@ public class CompanyPageController {
         model.addAttribute("newbsn", 0);
         model.addAttribute("newrole", "");
         model.addAttribute("roles", roles);
+
         return "company_page";
     }
 
@@ -83,6 +88,7 @@ public class CompanyPageController {
         Company currentCompany = companyService.findByChamberOfCommerceId(kvkNr);
         String userName = (String) session.getAttribute("userName");
         SmeUser smeUser = smeUserService.findByUserName(userName);
+
         model.addAttribute("smeUser", smeUser);
         model.addAttribute("userName", userName);
         model.addAttribute("role", smeUser.getRoleEmployee());
@@ -92,6 +98,7 @@ public class CompanyPageController {
         model.addAttribute("newbsn", 0);
         model.addAttribute("newrole", "");
         model.addAttribute("roles", roles);
+
         return "company_page";
     }
 
@@ -105,6 +112,7 @@ public class CompanyPageController {
         Company currentCompany = companyService.findByChamberOfCommerceId(kvkNr);
         SmeUser loggedInUser = smeUserService.findByUserName(userName);
         String message = addBankAccountService.addBankAccount(currentCompany);
+
         model.addAttribute("company", loggedInUser.getCompany());
         model.addAttribute("smeUser", loggedInUser);
         model.addAttribute("role", loggedInUser.getRoleEmployee());
@@ -115,6 +123,7 @@ public class CompanyPageController {
         model.addAttribute("newrole", "");
         model.addAttribute("roles", roles);
         model.addAttribute("message", message);
+
         return "company_page";
     }
 
@@ -126,17 +135,21 @@ public class CompanyPageController {
         BankAccount clickedBankAccount = bankAccountService.findByBankAccountId(bankAccountId);
         session.setAttribute("clickedBankAccount", clickedBankAccount);
         session.setAttribute("iban", clickedBankAccount.getIban());
+        session.setAttribute("bankAccountId", clickedBankAccount.getBankAccountId());
+
+        // TODO: refactor into stream
         List<Transaction> transactionList = clickedBankAccount.getTransactions();
         List<Transaction> transactionToList = clickedBankAccount.getTransactionsTo();
         transactionList.addAll(transactionToList);
         Collections.sort(transactionList);
         Collections.reverse(transactionList);
+
         model.addAttribute("iban", clickedBankAccount.getIban());
         model.addAttribute("balance", clickedBankAccount.twoDecimalBalance(clickedBankAccount.getBalance()));
         model.addAttribute("allTransactions",  transactionList);
         model.addAttribute("fullNames", session.getAttribute("fullNames"));
-        session.setAttribute("bankAccountId", clickedBankAccount.getBankAccountId());
         model.addAttribute("roles", roles);
+
         return "company_account_details";
     }
 }

@@ -24,17 +24,16 @@ public class AddBankAccountService {
     }
 
     public String addBankAccount(Company currentCompany) {
-        String message;
         if (currentCompany.getCompanyAccounts().size() >= MAX_ACCOUNTS) {
-            message = "You cannot have more than "+ MAX_ACCOUNTS + " bank accounts. ";
-        } else {
-            BankAccount newBankAccount = new BankAccount();
-            newBankAccount.setAccountType("Zakelijk");
-            currentCompany.addCompanyAccount(newBankAccount);
-            bankAccountService.newBankAccount(newBankAccount);
-            companyDao.save(currentCompany);
-            message = "Account added";
+            return "You cannot have more than "+ MAX_ACCOUNTS + " bank accounts. ";
         }
-        return message;
+
+        BankAccount newBankAccount = new BankAccount();
+        newBankAccount.setAccountType("Retail");
+        currentCompany.addCompanyAccount(newBankAccount);
+        bankAccountService.newBankAccount(newBankAccount);
+        companyDao.save(currentCompany);
+
+        return "Account added";
     }
 }

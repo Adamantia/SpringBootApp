@@ -1,26 +1,27 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<div th:insert="/fragments/header :: header"></div>
+<head th:include="/fragments/header :: header"></head>
 <body>
-<div th:insert="/fragments/navbar :: nav"></div>
+<nav th:include="/fragments/navbar :: nav"></nav>
 <div class="row"></div>
 <div class="p-3 mb-2 bg-primary text-white"><span th:text="${fullNames}"></span></div>
-<div class="p-3 mb-2 bg-secondary text-white"></div>
-<div class="container">
-    <h3 th:utext="${#strings.unescapeJava(#strings.replace(#strings.escapeJava(feedback),'\n','&lt;br /&gt;'))}"></h3>
-    <br>
+<div class="p-3 mb-2 bg-secondary text-white">
+    <div class="container">
+        <h3 th:utext="${#strings.unescapeJava(#strings.replace(#strings.escapeJava(feedback),'\n','&lt;br /&gt;'))}"></h3>
+        <hr />
 
-    <td><a th:href="@{transactionRequest(id=${bankAccountId})}" class="btn btn-info" role="button"> Make a
-        new transaction</a></td>
-    <br>
-    <br>
-    <td th:if="${bankAccountType=='Private'}">
-        Go <a href="/overview">back</a> to your personal page.
-    </td>
-    <td th:if="${bankAccountType=='Retail'}">
-        Go <a href="/company_overview">back</a> to your company page.
-    </td>
-    <br>
+        <td><a th:href="@{transactionRequest(id=${bankAccountId})}" class="btn btn-info" role="button"> Make a
+            new transaction</a></td>
+        <br>
+        <br>
+        <div th:if="${bankAccountType=='Private'}">
+            Go <a href="/overview">back</a> to your personal page.
+        </div>
+        <div th:if="${bankAccountType=='Retail'}">
+            Go <a href="/company_overview">back</a> to your company page.
+        </div>
+        <br>
+    </div>
 </div>
-<div th:insert="/fragments/footer :: footer"></div>
+<footer th:include="/fragments/footer :: footer"></footer>
 </body>
 </html>

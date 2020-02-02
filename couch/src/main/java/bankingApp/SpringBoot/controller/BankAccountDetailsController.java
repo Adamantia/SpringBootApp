@@ -25,6 +25,9 @@ public class BankAccountDetailsController {
         HttpSession session = request.getSession(true);
         BankAccount clickedBankAccount = bankAccountService.findByBankAccountId(bankAccountId);
         String retailUserFullNames = clickedBankAccount.getRetailUsers().get(0).getFullName();
+
+        // getting all transactions of selected bank account
+        // TODO: add validation check
         List <Transaction> transactionList = clickedBankAccount.getTransactions();
         Collections.reverse(transactionList);
         model.addAttribute("fullNames", retailUserFullNames);
@@ -36,6 +39,7 @@ public class BankAccountDetailsController {
         model.addAttribute("allTransactions", transactionList);
         session.setAttribute("clickedBankAccount", clickedBankAccount);
         session.setAttribute("fullNames", retailUserFullNames);
+
         return "bank_account_details";
     }
 }

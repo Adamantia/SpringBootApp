@@ -35,7 +35,7 @@ public class IbanGenerator {
     }
 
 
-    public String generateAccountNr() {
+    private String generateAccountNr() {
         Random random = new Random();
         StringBuilder sb1 = new StringBuilder();
         random.ints(ACCOUNTNR_LENGTH, 0, 9)
@@ -44,7 +44,7 @@ public class IbanGenerator {
     }
 
 
-    public String getControlCode() {
+    private String getControlCode() {
         StringBuilder sb = new StringBuilder();
         sb.append(getNrFromCode(BANKCODE));
         addZerosToAccount(sb, 3);
@@ -60,7 +60,7 @@ public class IbanGenerator {
     }
 
 
-    public String getNrFromCode(String code) {
+    private String getNrFromCode(String code) {
         Map<Character, Integer> hmap = generateAlphabetToNrMap();
         StringBuilder sb = new StringBuilder();
         for (int j = 0; j < code.length(); j++) {
@@ -75,7 +75,7 @@ public class IbanGenerator {
     }
 
 
-    public Map<Character, Integer> generateAlphabetToNrMap() {
+    private Map<Character, Integer> generateAlphabetToNrMap() {
         String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         Map<Character, Integer> hmap = new HashMap<Character, Integer>();
         int i = 10;
@@ -86,7 +86,7 @@ public class IbanGenerator {
         return hmap;
     }
 
-    public void addZerosToAccount(StringBuilder sb, int zeros) {
+    private void addZerosToAccount(StringBuilder sb, int zeros) {
         for (int i = 0; i < zeros; i++) {
             sb.append("0");
         }

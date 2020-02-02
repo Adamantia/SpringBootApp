@@ -29,7 +29,4 @@ public class RetailUserService {
         retailUser.setRole("Retail");
         retailUserRepository.save(retailUser);
     }
-
-
-
 }

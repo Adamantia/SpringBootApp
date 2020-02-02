@@ -61,6 +61,7 @@ public class TransactionController implements WebMvcConfigurer {
         HttpSession session = request.getSession (true);
         BankAccount bankAccountFrom = (BankAccount) session.getAttribute("clickedBankAccount");
         model.addAttribute("bankAccountType", bankAccountFrom.getAccountType());
+
         if(transaction.getBankAccountTo().getIban().equals(transaction.getBankAccount().getIban())
                 || bindingResult.hasErrors()){
             model.addAttribute("user",session.getAttribute("user"));
@@ -69,14 +70,16 @@ public class TransactionController implements WebMvcConfigurer {
             model.addAttribute("bankAccountTo", transaction.getBankAccountTo().getIban());
             model.addAttribute("userName", session.getAttribute("userName"));
             model.addAttribute("balance", bankAccountFrom.getBalance());
+
             return "transaction";
-        } else {
-            model.addAttribute("user",session.getAttribute("user"));
-            String feedback = transactionService.TransactionCalculation(transaction, bankAccountFrom);
-            model.addAttribute("feedback", feedback);
-            model.addAttribute("bankAccountId", bankAccountId);
-            model.addAttribute("fullNames", session.getAttribute("fullNames"));
-            return "transaction_feedback";
         }
+
+        model.addAttribute("user",session.getAttribute("user"));
+        String feedback = transactionService.TransactionCalculation(transaction, bankAccountFrom);
+        model.addAttribute("feedback", feedback);
+        model.addAttribute("bankAccountId", bankAccountId);
+        model.addAttribute("fullNames", session.getAttribute("fullNames"));
+
+        return "transaction_feedback";
     }
 }

@@ -27,13 +27,9 @@ public class CompanyService {
         return companyRepository.findByCompanyName(companyName);
     }
 
-
     public void newCompany(Company company) {
         BankUser accountManager = bankUserRepository.findAllByRole("Account Manager").get(0);
-       // accountManager.addCompany(company);
         company.setAccountManager(accountManager);
         companyRepository.save(company);
     }
-
-
 }

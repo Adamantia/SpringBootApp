@@ -46,19 +46,20 @@ public class NewCompanyController implements WebMvcConfigurer {
         }
         if (bindingResult.hasErrors()) {
             return "new_company";
-        } else {
-            BankAccount bankAccount = new BankAccount();
-            bankAccount.setAccountType("Zakelijk");
-            bankAccountService.newBankAccount(bankAccount);
-            // company.setEmployees(employees);
-            companyService.newCompany(company);
-            // saving company in session
-            session.setAttribute("company", company);
-            model.addAttribute("company", company);
-            model.addAttribute("roles", roles);
-            model.addAttribute("smeUser", smeUser);
-            return "new_smeUser";
         }
+
+        BankAccount bankAccount = new BankAccount();
+        bankAccount.setAccountType("Zakelijk");
+        bankAccountService.newBankAccount(bankAccount);
+        companyService.newCompany(company);
+
+        // saving company in session
+        session.setAttribute("company", company);
+        model.addAttribute("company", company);
+        model.addAttribute("roles", roles);
+        model.addAttribute("smeUser", smeUser);
+
+        return "new_smeUser";
     }
 }
 

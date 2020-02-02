@@ -18,15 +18,9 @@ public class PasswordValidator {
     }
 
     public boolean validateMemberPassword(User formUser) {
-        boolean loginOk;
         // user name is unique
         User dbUser = userDao.findByUserName(formUser.getUserName());
-        if (dbUser != null) {
-            loginOk = dbUser.getUserPassword().equals(formUser.getUserPassword());
-        } else {
-            loginOk = false;
-        }
-        return loginOk;
-    }
 
+        return dbUser != null && dbUser.getUserPassword().equals(formUser.getUserPassword());
+    }
 }

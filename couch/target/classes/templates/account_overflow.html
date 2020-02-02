@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:insert="/fragments/header :: header"></head>
+<head th:include="/fragments/header :: header"></head>
 <body>
 <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -11,6 +11,6 @@
 </nav>
 <div class="p-3 mb-2 bg-secondary text-white">You can have one retail bank account.</div>
 <a href="/"> Go back</a>
-<div th:insert="/fragments/footer :: footer"></div>
+<footer th:include="/fragments/footer :: footer"></footer>
 </body>
 </html>
