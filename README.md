@@ -9,3 +9,5 @@ Uses:
  - Thymeleaf 3.0.11
  - Lombok 1.18.10
  - Spring Data JPA
+ - Hibernate
+ 
