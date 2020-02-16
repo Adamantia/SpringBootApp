@@ -8,9 +8,9 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableJpaRepositories("bankingApp.SpringBoot")
 @EntityScan("bankingApp.SpringBoot")
 @SpringBootApplication
-public class CouchApplication {
+public class CouchBankApp {
 
     public static void main(String[] args) {
-        SpringApplication.run(CouchApplication.class, args);
+        SpringApplication.run(CouchBankApp.class, args);
     }
 }
