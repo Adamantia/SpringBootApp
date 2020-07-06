@@ -2,25 +2,7 @@
 
 An MVC Java Springboot banking app. 
 
- 
-## Installation
 
-Clone or download the project and open it in your IDE. 
-
-Add it as a new Maven project and import the pom.xml file. 
-
-In build, configure the project SDK and project language level as Java 11 (If you are using IntelliJ IDEA this is found under 'Project Structure' settings) 
-
-In edit configurations, add Spring boot template and add the main class path (i.e. bankingApp.SpringBoot.CouchBankApp). 
-
- - Database:
- 
- The app is configured to run on a local MySQL host. In the case you want to use the same settings, you must first download and run [MySQL workbench](https://www.mysql.com/products/workbench/).
- When you do, you should create an empty schema and a user corresponding to the name, user and password in your application properties respectively. Alternatively you can add a different database
- and define it in application properties, found in the resources folder.
- 
- You should now be able to run the app locally at port 8080.
- 
  ![](https://github.com/Adamantia/SpringBootApp/blob/master/couch/src/main/resources/static/images/index_screenshot.JPG)
  
  
